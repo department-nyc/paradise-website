@@ -1,59 +1,8 @@
 ---
 ---
 
-/*============================================================================
-  Shopify Timber
-  Copyright 2015 Shopify Inc.
-  Author Carson Shold @cshold
-  Built with Sass - http://sass-lang.com/
-
-  Some things to know about this file:
-    - Sass is compiled on Shopify's server so you don't need to convert it to CSS yourself
-    - The output CSS is compressed and comments are removed
-    - You cannot use @imports in this file
-        * Use grunt or gulp tasks to enable @imports - https://github.com/Shopify/shopify-css-import
-    - Helpers variables, mixins, and starter classes are provided. Change as needed.
-    - The file is prepped with a CSS reset
-    - The font icons are prepared using https://icomoon.io/app
-==============================================================================*/
-
-/*============================================================================
-  Table of Contents
-
-  #Breakpoint and Grid Variables
-  #General Variables
-  #Sass Mixins
-  #Normalize
-  #Grid Setup
-  #Basic Styles
-  #Helper Classes
-  #Typography
-  #Rich Text Editor
-  #Links and Buttons
-  #Lists
-  #Tables
-  #Reponsive Tables
-  #OOCSS Media Object
-  #Images and Iframes
-  #Forms
-  #Icons
-  #Pagination
-  #Site Header
-  #Site Nav and Dropdowns
-  #Mobile Nav
-  #Drawers
-  #Site Footer
-  #Product and Collection Grids
-  #Collection Filters
-  #Breadcrumbs
-  #Product Page
-  #Notes and Form Feedback
-  #Cart Page
-  #Ajax Cart Styles
-==============================================================================*/
-
-$color-primary: #33AC88;
-$color-primary-alt: #4D8381;
+$color-primary: #33ac88;
+$color-primary-alt: #4d8381;
 $color-dark-gray: #434344;
 $color-gray: #818181;
 $color-light-gray: #c7c7c7;
@@ -62,18 +11,15 @@ $color-very-light-gray: #efefef;
 
 $color-border: $color-light-gray;
 
-$transition-hover: .15s ease 0s;
+$transition-hover: 0.15s ease 0s;
 
-
-$default-easing: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$default-easing: cubic-bezier(0.77, 0, 0.175, 1);
 $animation-duration: 15s;
 
 $color-c: #cbcbcb;
 $color-80: #333333;
 
-$color-error: #5F2A2B;
-
-
+$color-error: #5f2a2b;
 
 /*============================================================================
   #Breakpoint and Grid Variables
@@ -84,11 +30,9 @@ $small: 480px;
 $medium: 565px;
 $large: 566px;
 
-
 $desktop: 500px;
 $desktop-1: $desktop - 1;
 // IF YOU CHANGE THIS, And referral active, change the JS window responsive width in progress bar controller, for KickOffLbas Share page.
-
 
 $postSmall: $small + $viewportIncrement;
 $preMedium: $medium - $viewportIncrement;
@@ -96,19 +40,18 @@ $preLarge: $large - $viewportIncrement;
 
 /*================ The following are dependencies of csswizardry grid ================*/
 $breakpoints: (
-  'small' '(max-width: #{$small})',
-  'medium' '(min-width: #{$postSmall}) and (max-width: #{$medium})',
-  'medium-down' '(max-width: #{$medium})',
-  'large' '(min-width: #{$large})'
+  "small" "(max-width: #{$small})",
+  "medium" "(min-width: #{$postSmall}) and (max-width: #{$medium})",
+  "medium-down" "(max-width: #{$medium})",
+  "large" "(min-width: #{$large})"
 );
-$breakpoint-has-widths: ('small', 'medium', 'medium-down', 'large');
-$breakpoint-has-push:  ('medium', 'medium-down', 'large');
-$breakpoint-has-pull:  ('medium', 'medium-down', 'large');
+$breakpoint-has-widths: ("small", "medium", "medium-down", "large");
+$breakpoint-has-push: ("medium", "medium-down", "large");
+$breakpoint-has-pull: ("medium", "medium-down", "large");
 
 /*============================================================================
   #General Variables
 ==============================================================================*/
-
 
 // Sizing variables
 $siteWidth: 1180px;
@@ -122,116 +65,123 @@ $zindexDrawer: 10;
 
 /*================ Typography ================*/
 
-$headerFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headerFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
 $headerFontWeight: 700;
 
-$bodyFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bodyFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $baseFontSize: 14px; // Henseforth known as 1em
 
 @font-face {
-  font-family: 'icons';
+  font-family: "icons";
   src: url('{{ "icons.eot" | asset_url }}');
   src: url('{{ "icons.eot" | asset_url }}#iefix') format("embedded-opentype"),
-       url('{{ "icons.woff" | asset_url }}') format("woff"),
-       url('{{ "icons.ttf" | asset_url }}') format("truetype"),
-       url('{{ "icons.svg" | asset_url }}#timber-icons') format("svg");
+    url('{{ "icons.woff" | asset_url }}') format("woff"),
+    url('{{ "icons.ttf" | asset_url }}') format("truetype"),
+    url('{{ "icons.svg" | asset_url }}#timber-icons') format("svg");
   font-weight: normal;
   font-style: normal;
 }
-$socialIconFontStack: 'icons';
+$socialIconFontStack: "icons";
 
 /* This stylesheet generated by Transfonter (http://transfonter.org) on February 4, 2016 7:45 PM */
 
 @font-face {
-  font-family: 'C';
-    src: url('../fonts/CalibreWeb-Regular.eot');
-    src: url('../fonts/CalibreWeb-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CalibreWeb-Regular.woff2') format('woff2'),
-         url('../fonts/CalibreWeb-Regular.woff') format('woff');
+  font-family: "C";
+  src: url("../fonts/CalibreWeb-Regular.eot");
+  src: url("../fonts/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/CalibreWeb-Regular.woff2") format("woff2"),
+    url("../fonts/CalibreWeb-Regular.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-    font-family: 'C';
-    src: url('../fonts/c-l-webfont.eot');
-    src: url('../fonts/c-l-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/c-l-webfont.woff2') format('woff2'),
-         url('../fonts/c-l-webfont.woff') format('woff'),
-         url('../fonts/c-l-webfont.ttf') format('truetype'),
-         url('../fonts/c-l-webfont.svg#C') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "C";
+  src: url("../fonts/c-l-webfont.eot");
+  src: url("../fonts/c-l-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/c-l-webfont.woff2") format("woff2"),
+    url("../fonts/c-l-webfont.woff") format("woff"),
+    url("../fonts/c-l-webfont.ttf") format("truetype"),
+    url("../fonts/c-l-webfont.svg#C") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'C';
-    src: url('../fonts/c-sb-webfont.eot');
-    src: url('../fonts/c-sb-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/c-sb-webfont.woff2') format('woff2'),
-         url('../fonts/c-sb-webfont.woff') format('woff'),
-         url('../fonts/c-sb-webfont.ttf') format('truetype'),
-         url('../fonts/c-sb-webfont.svg#C') format('svg');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "C";
+  src: url("../fonts/c-sb-webfont.eot");
+  src: url("../fonts/c-sb-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/c-sb-webfont.woff2") format("woff2"),
+    url("../fonts/c-sb-webfont.woff") format("woff"),
+    url("../fonts/c-sb-webfont.ttf") format("truetype"),
+    url("../fonts/c-sb-webfont.svg#C") format("svg");
+  font-weight: 600;
+  font-style: normal;
 }
-
 
 @font-face {
-    font-family: 'Domaine Display Condensed';
-    src: url('../fonts/DomaineDisplayCondensedWeb-Medium.eot');
-    src: url('../fonts/DomaineDisplayCondensedWeb-Medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/DomaineDisplayCondensedWeb-Medium.woff2') format('woff'),
-         url('../fonts/DomaineDisplayCondensedWeb-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Domaine Display Condensed";
+  src: url("../fonts/DomaineDisplayCondensedWeb-Medium.eot");
+  src: url("../fonts/DomaineDisplayCondensedWeb-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DomaineDisplayCondensedWeb-Medium.woff2") format("woff"),
+    url("../fonts/DomaineDisplayCondensedWeb-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-@mixin font-face($filename-without-extension, $name, $weight: 'normal', $style: 'normal') {
+@mixin font-face(
+  $filename-without-extension,
+  $name,
+  $weight: "normal",
+  $style: "normal"
+) {
   @font-face {
-      font-family: $name;
-      src: url('#{$filename-without-extension}.eot');
-      src: url('#{$filename-without-extension}.eot?#iefix') format('embedded-opentype'),
-           url('#{$filename-without-extension}.woff2') format('woff2'),
-           url('#{$filename-without-extension}.woff') format('woff'),
-           url('#{$filename-without-extension}.ttf') format('truetype'),
-           url('#{$filename-without-extension}.svg#C') format('svg');
-      font-weight: $weight;
-      font-style: $style;
+    font-family: $name;
+    src: url("#{$filename-without-extension}.eot");
+    src: url("#{$filename-without-extension}.eot?#iefix")
+        format("embedded-opentype"),
+      url("#{$filename-without-extension}.woff2") format("woff2"),
+      url("#{$filename-without-extension}.woff") format("woff"),
+      url("#{$filename-without-extension}.ttf") format("truetype"),
+      url("#{$filename-without-extension}.svg#C") format("svg");
+    font-weight: $weight;
+    font-style: $style;
   }
 }
 
-@include font-face('apercu_light', 'Apercu', 'normal', 'normal');
-
+@include font-face("apercu_light", "Apercu", "normal", "normal");
 
 @font-face {
-    font-family: 'Apercu';
-    src: url('apercu_bold.eot');
-    src: url('apercu_bold.eot?#iefix') format('embedded-opentype'),
-         url('apercu_bold.woff2') format('woff2'),
-         url('apercu_bold.woff') format('woff'),
-         url('apercu_bold.ttf') format('truetype'),
-         url('apercu_bold.svg#C') format('svg');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Apercu";
+  src: url("apercu_bold.eot");
+  src: url("apercu_bold.eot?#iefix") format("embedded-opentype"),
+    url("apercu_bold.woff2") format("woff2"),
+    url("apercu_bold.woff") format("woff"),
+    url("apercu_bold.ttf") format("truetype"),
+    url("apercu_bold.svg#C") format("svg");
+  font-weight: bold;
+  font-style: normal;
 }
 /*============================================================================
   #Sass Mixins
 ==============================================================================*/
 .clearfix {
   &:after {
-    content: '';
+    content: "";
     display: table;
-    clear: both; }
+    clear: both;
+  }
   *zoom: 1;
 }
 
 @mixin clearfix() {
   &:after {
-    content: '';
+    content: "";
     display: table;
-    clear: both; }
+    clear: both;
+  }
   *zoom: 1;
 }
 
@@ -265,7 +215,7 @@ $socialIconFontStack: 'icons';
       -o-#{$property}: $value;
     } @else if $prefix == spec {
       #{$property}: $value;
-    } @else  {
+    } @else {
       @warn "Unrecognized prefix: #{$prefix}";
     }
   }
@@ -291,10 +241,9 @@ $socialIconFontStack: 'icons';
 }
 
 @function color-control($color) {
-  @if (lightness( $color ) > 40) {
+  @if (lightness($color) > 40) {
     @return #000;
-  }
-  @else {
+  } @else {
     @return #fff;
   }
 }
@@ -314,10 +263,14 @@ $socialIconFontStack: 'icons';
 ==============================================================================*/
 $min: min-width;
 $max: max-width;
-@mixin at-query ($constraint_, $viewport1_, $viewport2_:null) {
- $constraint: $constraint_; $viewport1: $viewport1_; $viewport2: $viewport2_;
+@mixin at-query($constraint_, $viewport1_, $viewport2_: null) {
+  $constraint: $constraint_;
+  $viewport1: $viewport1_;
+  $viewport2: $viewport2_;
   @if type-of($constraint_) == number {
-    $viewport1 : $constraint_; $viewport2 : $viewport1_; $constraint : null;
+    $viewport1: $constraint_;
+    $viewport2: $viewport1_;
+    $constraint: null;
   }
   @if $constraint == $min {
     @media screen and ($min: $viewport1) {
@@ -357,15 +310,18 @@ $max: max-width;
   }
 }
 
-
 /*============================================================================
   #Normalize
 ==============================================================================*/
-*, input, :before, :after {
+*,
+input,
+:before,
+:after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   font-family: Arial;
@@ -377,7 +333,6 @@ html, body {
 // div[js-index-content]::-webkit-scrollbar {
 //   display: block;
 // }
-
 
 html.navbar-mobile-open,
 html.js-viewing-full-project {
@@ -392,11 +347,25 @@ html.js-viewing-full-project {
   }
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block;
 }
 
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
   vertical-align: baseline;
 }
@@ -417,11 +386,11 @@ input[type="search"]::-webkit-search-decoration {
     - Breakpoints defined above, under #Breakpoint and Grid Variables
     - Note the inclusion of .grid-uniform to take care of clearfixes on evenly sized grid items
 ==============================================================================*/
-$responsive:         true;
-$mobile-first:       true;
+$responsive: true;
+$mobile-first: true;
 $use-silent-classes: false;
-$push:               true;
-$pull:               false;
+$push: true;
+$pull: false;
 
 /* Force clearfix on grids */
 .grid,
@@ -461,14 +430,13 @@ $class-type: unquote(".");
   }
 }
 
-
 /*============================================================================
   Drop relative positioning into silent classes which can't take advantage of
   the `[class*="push--"]` and `[class*="pull--"]` selectors.
 ==============================================================================*/
 @mixin silent-relative() {
   @if $use-silent-classes == true {
-    position:relative;
+    position: relative;
   }
 }
 
@@ -527,101 +495,203 @@ $class-type: unquote(".");
   WIDTHS
     - Create width classes, prefixed by the specified namespace.
 ==============================================================================*/
-@mixin device-type($namespace:"") {
+@mixin device-type($namespace: "") {
   /** Whole */
-  #{$class-type}#{$namespace}one-whole       { width: 100%; }
+  #{$class-type}#{$namespace}one-whole {
+    width: 100%;
+  }
 
   /* Halves */
-  #{$class-type}#{$namespace}one-half        { width: 50%; }
+  #{$class-type}#{$namespace}one-half {
+    width: 50%;
+  }
 
   /* Thirds */
-  #{$class-type}#{$namespace}one-third       { width: 33.333%; }
-  #{$class-type}#{$namespace}two-thirds      { width: 66.666%; }
+  #{$class-type}#{$namespace}one-third {
+    width: 33.333%;
+  }
+  #{$class-type}#{$namespace}two-thirds {
+    width: 66.666%;
+  }
 
   /* Quarters */
-  #{$class-type}#{$namespace}one-quarter     { width: 25%; }
-  #{$class-type}#{$namespace}two-quarters    { width: 50%; }
-  #{$class-type}#{$namespace}three-quarters  { width: 75%; }
+  #{$class-type}#{$namespace}one-quarter {
+    width: 25%;
+  }
+  #{$class-type}#{$namespace}two-quarters {
+    width: 50%;
+  }
+  #{$class-type}#{$namespace}three-quarters {
+    width: 75%;
+  }
 
   /* Fifths */
-  #{$class-type}#{$namespace}one-fifth       { width: 20%; }
-  #{$class-type}#{$namespace}two-fifths      { width: 40%; }
-  #{$class-type}#{$namespace}three-fifths    { width: 60%; }
-  #{$class-type}#{$namespace}four-fifths     { width: 80%; }
+  #{$class-type}#{$namespace}one-fifth {
+    width: 20%;
+  }
+  #{$class-type}#{$namespace}two-fifths {
+    width: 40%;
+  }
+  #{$class-type}#{$namespace}three-fifths {
+    width: 60%;
+  }
+  #{$class-type}#{$namespace}four-fifths {
+    width: 80%;
+  }
 
   /* Sixths */
-  #{$class-type}#{$namespace}one-sixth       { width: 16.666%; }
-  #{$class-type}#{$namespace}two-sixths      { width: 33.333%; }
-  #{$class-type}#{$namespace}three-sixths    { width: 50%; }
-  #{$class-type}#{$namespace}four-sixths     { width: 66.666%; }
-  #{$class-type}#{$namespace}five-sixths     { width: 83.333%; }
+  #{$class-type}#{$namespace}one-sixth {
+    width: 16.666%;
+  }
+  #{$class-type}#{$namespace}two-sixths {
+    width: 33.333%;
+  }
+  #{$class-type}#{$namespace}three-sixths {
+    width: 50%;
+  }
+  #{$class-type}#{$namespace}four-sixths {
+    width: 66.666%;
+  }
+  #{$class-type}#{$namespace}five-sixths {
+    width: 83.333%;
+  }
 
   /* Eighths */
-  #{$class-type}#{$namespace}one-eighth      { width: 12.5%; }
-  #{$class-type}#{$namespace}two-eighths     { width: 25%; }
-  #{$class-type}#{$namespace}three-eighths   { width: 37.5%; }
-  #{$class-type}#{$namespace}four-eighths    { width: 50%; }
-  #{$class-type}#{$namespace}five-eighths    { width: 62.5%; }
-  #{$class-type}#{$namespace}six-eighths     { width: 75%; }
-  #{$class-type}#{$namespace}seven-eighths   { width: 87.5%; }
+  #{$class-type}#{$namespace}one-eighth {
+    width: 12.5%;
+  }
+  #{$class-type}#{$namespace}two-eighths {
+    width: 25%;
+  }
+  #{$class-type}#{$namespace}three-eighths {
+    width: 37.5%;
+  }
+  #{$class-type}#{$namespace}four-eighths {
+    width: 50%;
+  }
+  #{$class-type}#{$namespace}five-eighths {
+    width: 62.5%;
+  }
+  #{$class-type}#{$namespace}six-eighths {
+    width: 75%;
+  }
+  #{$class-type}#{$namespace}seven-eighths {
+    width: 87.5%;
+  }
 
   /* Tenths */
-  #{$class-type}#{$namespace}one-tenth       { width: 10%; }
-  #{$class-type}#{$namespace}two-tenths      { width: 20%; }
-  #{$class-type}#{$namespace}three-tenths    { width: 30%; }
-  #{$class-type}#{$namespace}four-tenths     { width: 40%; }
-  #{$class-type}#{$namespace}five-tenths     { width: 50%; }
-  #{$class-type}#{$namespace}six-tenths      { width: 60%; }
-  #{$class-type}#{$namespace}seven-tenths    { width: 70%; }
-  #{$class-type}#{$namespace}eight-tenths    { width: 80%; }
-  #{$class-type}#{$namespace}nine-tenths     { width: 90%; }
+  #{$class-type}#{$namespace}one-tenth {
+    width: 10%;
+  }
+  #{$class-type}#{$namespace}two-tenths {
+    width: 20%;
+  }
+  #{$class-type}#{$namespace}three-tenths {
+    width: 30%;
+  }
+  #{$class-type}#{$namespace}four-tenths {
+    width: 40%;
+  }
+  #{$class-type}#{$namespace}five-tenths {
+    width: 50%;
+  }
+  #{$class-type}#{$namespace}six-tenths {
+    width: 60%;
+  }
+  #{$class-type}#{$namespace}seven-tenths {
+    width: 70%;
+  }
+  #{$class-type}#{$namespace}eight-tenths {
+    width: 80%;
+  }
+  #{$class-type}#{$namespace}nine-tenths {
+    width: 90%;
+  }
 
   /* Twelfths */
-  #{$class-type}#{$namespace}one-twelfth     { width: 8.333%; }
-  #{$class-type}#{$namespace}two-twelfths    { width: 16.666%; }
-  #{$class-type}#{$namespace}three-twelfths  { width: 25%; }
-  #{$class-type}#{$namespace}four-twelfths   { width: 33.333%; }
-  #{$class-type}#{$namespace}five-twelfths   { width: 41.666% }
-  #{$class-type}#{$namespace}six-twelfths    { width: 50%; }
-  #{$class-type}#{$namespace}seven-twelfths  { width: 58.333%; }
-  #{$class-type}#{$namespace}eight-twelfths  { width: 66.666%; }
-  #{$class-type}#{$namespace}nine-twelfths   { width: 75%; }
-  #{$class-type}#{$namespace}ten-twelfths    { width: 83.333%; }
-  #{$class-type}#{$namespace}eleven-twelfths { width: 91.666%; }
+  #{$class-type}#{$namespace}one-twelfth {
+    width: 8.333%;
+  }
+  #{$class-type}#{$namespace}two-twelfths {
+    width: 16.666%;
+  }
+  #{$class-type}#{$namespace}three-twelfths {
+    width: 25%;
+  }
+  #{$class-type}#{$namespace}four-twelfths {
+    width: 33.333%;
+  }
+  #{$class-type}#{$namespace}five-twelfths {
+    width: 41.666%;
+  }
+  #{$class-type}#{$namespace}six-twelfths {
+    width: 50%;
+  }
+  #{$class-type}#{$namespace}seven-twelfths {
+    width: 58.333%;
+  }
+  #{$class-type}#{$namespace}eight-twelfths {
+    width: 66.666%;
+  }
+  #{$class-type}#{$namespace}nine-twelfths {
+    width: 75%;
+  }
+  #{$class-type}#{$namespace}ten-twelfths {
+    width: 83.333%;
+  }
+  #{$class-type}#{$namespace}eleven-twelfths {
+    width: 91.666%;
+  }
 }
 
 /*================ Clearfix helper on uniform grids ================*/
-@mixin clearfix-helper($namespace:"") {
+@mixin clearfix-helper($namespace: "") {
   .grid-uniform {
-    #{$class-type}#{$namespace}one-half:nth-child(2n+1),
-    #{$class-type}#{$namespace}one-third:nth-child(3n+1),
-    #{$class-type}#{$namespace}one-quarter:nth-child(4n+1),
-    #{$class-type}#{$namespace}one-fifth:nth-child(5n+1),
-    #{$class-type}#{$namespace}one-sixth:nth-child(6n+1),
-    #{$class-type}#{$namespace}two-sixths:nth-child(3n+1),
-    #{$class-type}#{$namespace}three-sixths:nth-child(2n+1),
-    #{$class-type}#{$namespace}two-eighths:nth-child(4n+1),
-    #{$class-type}#{$namespace}four-eighths:nth-child(2n+1),
-    #{$class-type}#{$namespace}five-tenths:nth-child(2n+1),
-    #{$class-type}#{$namespace}one-twelfth:nth-child(12n+1),
-    #{$class-type}#{$namespace}two-twelfths:nth-child(6n+1),
-    #{$class-type}#{$namespace}three-twelfths:nth-child(4n+1),
-    #{$class-type}#{$namespace}four-twelfths:nth-child(3n+1),
-    #{$class-type}#{$namespace}six-twelfths:nth-child(2n+1)    { clear: both; }
+    #{$class-type}#{$namespace}one-half:nth-child(2n + 1),
+    #{$class-type}#{$namespace}one-third:nth-child(3n + 1),
+    #{$class-type}#{$namespace}one-quarter:nth-child(4n + 1),
+    #{$class-type}#{$namespace}one-fifth:nth-child(5n + 1),
+    #{$class-type}#{$namespace}one-sixth:nth-child(6n + 1),
+    #{$class-type}#{$namespace}two-sixths:nth-child(3n + 1),
+    #{$class-type}#{$namespace}three-sixths:nth-child(2n + 1),
+    #{$class-type}#{$namespace}two-eighths:nth-child(4n + 1),
+    #{$class-type}#{$namespace}four-eighths:nth-child(2n + 1),
+    #{$class-type}#{$namespace}five-tenths:nth-child(2n + 1),
+    #{$class-type}#{$namespace}one-twelfth:nth-child(12n + 1),
+    #{$class-type}#{$namespace}two-twelfths:nth-child(6n + 1),
+    #{$class-type}#{$namespace}three-twelfths:nth-child(4n + 1),
+    #{$class-type}#{$namespace}four-twelfths:nth-child(3n + 1),
+    #{$class-type}#{$namespace}six-twelfths:nth-child(2n + 1) {
+      clear: both;
+    }
   }
 }
 
 /*================ Helper show/hide classes around our breakpoints ================*/
-@mixin device-helper($namespace:"") {
-  #{$class-type}#{$namespace}show        { display: block!important; }
-  #{$class-type}#{$namespace}hide        { display: none!important; }
+@mixin device-helper($namespace: "") {
+  #{$class-type}#{$namespace}show {
+    display: block !important;
+  }
+  #{$class-type}#{$namespace}hide {
+    display: none !important;
+  }
 
-  #{$class-type}#{$namespace}text-left   { text-align: left!important; }
-  #{$class-type}#{$namespace}text-right  { text-align: right!important; }
-  #{$class-type}#{$namespace}text-center { text-align: center!important; }
+  #{$class-type}#{$namespace}text-left {
+    text-align: left !important;
+  }
+  #{$class-type}#{$namespace}text-right {
+    text-align: right !important;
+  }
+  #{$class-type}#{$namespace}text-center {
+    text-align: center !important;
+  }
 
-  #{$class-type}#{$namespace}left        { float: left!important; }
-  #{$class-type}#{$namespace}right       { float: right!important; }
+  #{$class-type}#{$namespace}left {
+    float: left !important;
+  }
+  #{$class-type}#{$namespace}right {
+    float: right !important;
+  }
 }
 
 /*================ Our regular, non-responsive width and helper classes ================*/
@@ -632,9 +702,9 @@ $class-type: unquote(".");
 @if $responsive == true {
   @each $name in $breakpoint-has-widths {
     @include grid-media-query($name) {
-      @include device-type('#{$name}--');
-      @include device-helper('#{$name}--');
-      @include clearfix-helper('#{$name}--');
+      @include device-type("#{$name}--");
+      @include device-helper("#{$name}--");
+      @include clearfix-helper("#{$name}--");
     }
   }
 }
@@ -645,76 +715,207 @@ $class-type: unquote(".");
 ==============================================================================*/
 @mixin push-setup($namespace: "") {
   /* Whole */
-  #{$class-type}push--#{$namespace}one-whole       { left: 100%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-whole {
+    left: 100%;
+    @include silent-relative();
+  }
 
   /* Halves */
-  #{$class-type}push--#{$namespace}one-half        { left: 50%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-half {
+    left: 50%;
+    @include silent-relative();
+  }
 
   /* Thirds */
-  #{$class-type}push--#{$namespace}one-third       { left: 33.333%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-thirds      { left: 66.666%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-third {
+    left: 33.333%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-thirds {
+    left: 66.666%;
+    @include silent-relative();
+  }
 
   /* Quarters */
-  #{$class-type}push--#{$namespace}one-quarter     { left: 25%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-quarters    { left: 50%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}three-quarters  { left: 75%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-quarter {
+    left: 25%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-quarters {
+    left: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}three-quarters {
+    left: 75%;
+    @include silent-relative();
+  }
 
   /* Fifths */
-  #{$class-type}push--#{$namespace}one-fifth       { left: 20%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-fifths      { left: 40%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}three-fifths    { left: 60%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}four-fifths     { left: 80%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-fifth {
+    left: 20%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-fifths {
+    left: 40%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}three-fifths {
+    left: 60%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}four-fifths {
+    left: 80%;
+    @include silent-relative();
+  }
 
   /* Sixths */
-  #{$class-type}push--#{$namespace}one-sixth       { left: 16.666%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-sixths      { left: 33.333%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}three-sixths    { left: 50%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}four-sixths     { left: 66.666%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}five-sixths     { left: 83.333%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-sixth {
+    left: 16.666%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-sixths {
+    left: 33.333%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}three-sixths {
+    left: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}four-sixths {
+    left: 66.666%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}five-sixths {
+    left: 83.333%;
+    @include silent-relative();
+  }
 
   /* Eighths */
-  #{$class-type}push--#{$namespace}one-eighth      { left: 12.5%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-eighths     { left: 25%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}three-eighths   { left: 37.5%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}four-eighths    { left: 50%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}five-eighths    { left: 62.5%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}six-eighths     { left: 75%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}seven-eighths   { left: 87.5%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-eighth {
+    left: 12.5%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-eighths {
+    left: 25%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}three-eighths {
+    left: 37.5%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}four-eighths {
+    left: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}five-eighths {
+    left: 62.5%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}six-eighths {
+    left: 75%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}seven-eighths {
+    left: 87.5%;
+    @include silent-relative();
+  }
 
   /* Tenths */
-  #{$class-type}push--#{$namespace}one-tenth       { left: 10%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-tenths      { left: 20%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}three-tenths    { left: 30%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}four-tenths     { left: 40%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}five-tenths     { left: 50%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}six-tenths      { left: 60%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}seven-tenths    { left: 70%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}eight-tenths    { left: 80%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}nine-tenths     { left: 90%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-tenth {
+    left: 10%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-tenths {
+    left: 20%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}three-tenths {
+    left: 30%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}four-tenths {
+    left: 40%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}five-tenths {
+    left: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}six-tenths {
+    left: 60%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}seven-tenths {
+    left: 70%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}eight-tenths {
+    left: 80%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}nine-tenths {
+    left: 90%;
+    @include silent-relative();
+  }
 
   /* Twelfths */
-  #{$class-type}push--#{$namespace}one-twelfth     { left: 8.333%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}two-twelfths    { left: 16.666%; @include silent-relative();  }
-  #{$class-type}push--#{$namespace}three-twelfths  { left: 25%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}four-twelfths   { left: 33.333%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}five-twelfths   { left: 41.666%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}six-twelfths    { left: 50%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}seven-twelfths  { left: 58.333%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}eight-twelfths  { left: 66.666%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}nine-twelfths   { left: 75%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}ten-twelfths    { left: 83.333%; @include silent-relative(); }
-  #{$class-type}push--#{$namespace}eleven-twelfths { left: 91.666%; @include silent-relative(); }
+  #{$class-type}push--#{$namespace}one-twelfth {
+    left: 8.333%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}two-twelfths {
+    left: 16.666%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}three-twelfths {
+    left: 25%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}four-twelfths {
+    left: 33.333%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}five-twelfths {
+    left: 41.666%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}six-twelfths {
+    left: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}seven-twelfths {
+    left: 58.333%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}eight-twelfths {
+    left: 66.666%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}nine-twelfths {
+    left: 75%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}ten-twelfths {
+    left: 83.333%;
+    @include silent-relative();
+  }
+  #{$class-type}push--#{$namespace}eleven-twelfths {
+    left: 91.666%;
+    @include silent-relative();
+  }
 }
 
 @if $push == true {
-  [class*="push--"]{ position:relative; }
+  [class*="push--"] {
+    position: relative;
+  }
 
   @include push-setup();
 
   @if $responsive == true {
     @each $name in $breakpoint-has-push {
       @include grid-media-query($name) {
-        @include push-setup('#{$name}--');
+        @include push-setup("#{$name}--");
       }
     }
   }
@@ -726,98 +927,230 @@ $class-type: unquote(".");
 ==============================================================================*/
 @mixin pull-setup($namespace: "") {
   /* Whole */
-  #{$class-type}pull--#{$namespace}one-whole       { right: 100%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-whole {
+    right: 100%;
+    @include silent-relative();
+  }
 
   /* Halves */
-  #{$class-type}pull--#{$namespace}one-half        { right: 50%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-half {
+    right: 50%;
+    @include silent-relative();
+  }
 
   /* Thirds */
-  #{$class-type}pull--#{$namespace}one-third       { right: 33.333%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-thirds      { right: 66.666%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-third {
+    right: 33.333%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-thirds {
+    right: 66.666%;
+    @include silent-relative();
+  }
 
   /* Quarters */
-  #{$class-type}pull--#{$namespace}one-quarter     { right: 25%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-quarters    { right: 50%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}three-quarters  { right: 75%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-quarter {
+    right: 25%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-quarters {
+    right: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}three-quarters {
+    right: 75%;
+    @include silent-relative();
+  }
 
   /* Fifths */
-  #{$class-type}pull--#{$namespace}one-fifth       { right: 20%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-fifths      { right: 40%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}three-fifths    { right: 60%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}four-fifths     { right: 80%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-fifth {
+    right: 20%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-fifths {
+    right: 40%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}three-fifths {
+    right: 60%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}four-fifths {
+    right: 80%;
+    @include silent-relative();
+  }
 
   /* Sixths */
-  #{$class-type}pull--#{$namespace}one-sixth       { right: 16.666%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-sixths      { right: 33.333%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}three-sixths    { right: 50%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}four-sixths     { right: 66.666%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}five-sixths     { right: 83.333%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-sixth {
+    right: 16.666%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-sixths {
+    right: 33.333%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}three-sixths {
+    right: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}four-sixths {
+    right: 66.666%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}five-sixths {
+    right: 83.333%;
+    @include silent-relative();
+  }
 
   /* Eighths */
-  #{$class-type}pull--#{$namespace}one-eighth      { right: 12.5%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-eighths     { right: 25%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}three-eighths   { right: 37.5%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}four-eighths    { right: 50%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}five-eighths    { right: 62.5%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}six-eighths     { right: 75%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}seven-eighths   { right: 87.5%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-eighth {
+    right: 12.5%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-eighths {
+    right: 25%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}three-eighths {
+    right: 37.5%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}four-eighths {
+    right: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}five-eighths {
+    right: 62.5%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}six-eighths {
+    right: 75%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}seven-eighths {
+    right: 87.5%;
+    @include silent-relative();
+  }
 
   /* Tenths */
-  #{$class-type}pull--#{$namespace}one-tenth       { right: 10%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-tenths      { right: 20%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}three-tenths    { right: 30%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}four-tenths     { right: 40%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}five-tenths     { right: 50%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}six-tenths      { right: 60%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}seven-tenths    { right: 70%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}eight-tenths    { right: 80%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}nine-tenths     { right: 90%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-tenth {
+    right: 10%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-tenths {
+    right: 20%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}three-tenths {
+    right: 30%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}four-tenths {
+    right: 40%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}five-tenths {
+    right: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}six-tenths {
+    right: 60%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}seven-tenths {
+    right: 70%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}eight-tenths {
+    right: 80%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}nine-tenths {
+    right: 90%;
+    @include silent-relative();
+  }
 
   /* Twelfths */
-  #{$class-type}pull--#{$namespace}one-twelfth     { right: 8.333%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}two-twelfths    { right: 16.666%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}three-twelfths  { right: 25%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}four-twelfths   { right: 33.333%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}five-twelfths   { right: 41.666%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}six-twelfths    { right: 50%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}seven-twelfths  { right: 58.333%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}eight-twelfths  { right: 66.666%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}nine-twelfths   { right: 75%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}ten-twelfths    { right: 83.333%; @include silent-relative(); }
-  #{$class-type}pull--#{$namespace}eleven-twelfths { right: 91.666%; @include silent-relative(); }
+  #{$class-type}pull--#{$namespace}one-twelfth {
+    right: 8.333%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}two-twelfths {
+    right: 16.666%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}three-twelfths {
+    right: 25%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}four-twelfths {
+    right: 33.333%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}five-twelfths {
+    right: 41.666%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}six-twelfths {
+    right: 50%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}seven-twelfths {
+    right: 58.333%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}eight-twelfths {
+    right: 66.666%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}nine-twelfths {
+    right: 75%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}ten-twelfths {
+    right: 83.333%;
+    @include silent-relative();
+  }
+  #{$class-type}pull--#{$namespace}eleven-twelfths {
+    right: 91.666%;
+    @include silent-relative();
+  }
 }
 
 @if $pull == true {
-  [class*="pull--"]{ position:relative; }
+  [class*="pull--"] {
+    position: relative;
+  }
 
   @include pull-setup();
 
   @if $responsive == true {
     @each $name in $breakpoint-has-pull {
       @include grid-media-query($name) {
-        @include pull-setup('#{$name}--');
+        @include pull-setup("#{$name}--");
       }
     }
   }
 }
 
-
 @mixin placeholder {
-    &::-webkit-input-placeholder {
-        @content;
-    }
+  &::-webkit-input-placeholder {
+    @content;
+  }
 
-    &:-moz-placeholder { /* Firefox 18- */
-        @content;
-    }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @content;
+  }
 
-    &::-moz-placeholder {  /* Firefox 19+ */
-        @content;
-    }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @content;
+  }
 
-    &:-ms-input-placeholder {
-        @content;
-    }
+  &:-ms-input-placeholder {
+    @content;
+  }
 }
 
 @mixin transition($value...) {
@@ -828,68 +1161,67 @@ $class-type: unquote(".");
   // useful method if pixellation results from translate
   white-space: nowrap;
   &:after {
-    content: '';
+    content: "";
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-    width: .1px;
+    width: 0.1px;
   }
 }
 
 @mixin gvalign-child {
-	white-space: normal;
-	width: 100%;
-	display: inline-block;
-	vertical-align: middle;
+  white-space: normal;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .gvalign {
   @include gvalign;
 }
-  .gvalign-child {
-    @include gvalign-child;
+.gvalign-child {
+  @include gvalign-child;
+}
+
+@mixin keyframe($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
   }
 
-@mixin keyframe ($animation_name) {
-    @-webkit-keyframes $animation_name {
-        @content;
-    }
+  @-moz-keyframes $animation_name {
+    @content;
+  }
 
-    @-moz-keyframes $animation_name {
-        @content;
-    }
+  @-o-keyframes $animation_name {
+    @content;
+  }
 
-    @-o-keyframes $animation_name {
-        @content;
-    }
-
-    @keyframes $animation_name {
-        @content;
-    }
+  @keyframes $animation_name {
+    @content;
+  }
 }
 
-@mixin animation ($delay, $duration, $animation) {
-    -webkit-animation-delay: $delay;
-    -webkit-animation-duration: $duration;
-    -webkit-animation-name: $animation;
-    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+@mixin animation($delay, $duration, $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 
-    -moz-animation-delay: $delay;
-    -moz-animation-duration: $duration;
-    -moz-animation-name: $animation;
-    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 
-    -o-animation-delay: $delay;
-    -o-animation-duration: $duration;
-    -o-animation-name: $animation;
-    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 
-    animation-delay: $delay;
-    animation-duration: $duration;
-    animation-name: $animation;
-    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 }
-
 
 // Our Mixins
 // Our Mixins
@@ -925,10 +1257,10 @@ $class-type: unquote(".");
 }
 
 .no-transition {
-    -moz-transition: none !important;
-    -webkit-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 @mixin clearfix {
@@ -939,13 +1271,13 @@ $class-type: unquote(".");
   }
 }
 
-
 @mixin link-color($color, $text-decoration: null) {
   color: $color;
   @if ($text-decoration != null) {
     text-decoration: $text-decoration;
   }
-  &:visited, &:active {
+  &:visited,
+  &:active {
     color: $color;
     @if ($text-decoration != null) {
       text-decoration: $text-decoration;
@@ -973,7 +1305,6 @@ $desktop-margin: 35px;
   clear: both;
   @include clearfix;
 
-
   padding-left: $desktop-margin;
   padding-right: $desktop-margin;
   @include rm {
@@ -994,7 +1325,6 @@ $desktop-margin: 35px;
   @include container;
 }
 
-
 @mixin container-row {
   // to save tons of nested markup, use this when we only need a single container-row.
   @include container;
@@ -1013,7 +1343,6 @@ $desktop-margin: 35px;
     padding-left: $margin - $gutter;
     padding-right: $margin - $gutter;
   }
-
 }
 
 .container-row {
@@ -1042,13 +1371,13 @@ $desktop-margin: 35px;
   }
 }
 
-.row, .grid {
+.row,
+.grid {
   @include row;
 }
 .row-no-pad {
   @include clearfix;
 }
-
 
 @function calculate-width($col, $grid_columns: $grid_columns) {
   @return ($col/$grid_columns) * 100%;
@@ -1088,7 +1417,6 @@ $desktop-margin: 35px;
   margin-right: -100%;
 }
 
-
 // nested grids
 @function nested-column-width($target-columns, $nested-in-columns) {
   // get a global grid size in a nested column.
@@ -1097,7 +1425,7 @@ $desktop-margin: 35px;
   $target-percentage: $target-columns/$grid-columns;
   $nested-columns-percentage: $grid-columns/$nested-in-columns;
 
-  @return ($target-percentage * $nested-columns-percentage)*100%;
+  @return ($target-percentage * $nested-columns-percentage) * 100%;
 }
 @mixin nested-column($target-columns, $nested-in-columns) {
   width: nested-column-width($target-columns, $nested-in-columns);
@@ -1107,8 +1435,6 @@ $desktop-margin: 35px;
     padding: 0 $mobile-gutter/2;
   }
 }
-
-
 
 @for $i from 1 through 12 {
   .g#{$i} {
@@ -1130,9 +1456,7 @@ $desktop-margin: 35px;
       @include nested-column($i, $start);
     }
   }
-
 }
-
 
 @for $grid-columns from 4 through 12 {
   @for $col from 1 through $grid-columns {
@@ -1161,16 +1485,16 @@ $desktop-margin: 35px;
 }
 .grid-debug {
   text-align: center;
-  background: rgba(red, .2);
+  background: rgba(red, 0.2);
   height: 20px;
   margin-bottom: 10px;
   .grid-debug {
-    background: rgba(red, .5);
+    background: rgba(red, 0.5);
     height: 30px;
   }
 }
 .debug-element {
-  background: rgba(red, .3);
+  background: rgba(red, 0.3);
   font-size: 12px;
   padding: 10px;
   display: none;
@@ -1178,23 +1502,18 @@ $desktop-margin: 35px;
 
 // grid debug in background
 .grid-debug-bg {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
   pointer-events: none;
-	.grid-debug {
-		height: 100vh;
-		background: rgba(red, .1);
-	}
+  .grid-debug {
+    height: 100vh;
+    background: rgba(red, 0.1);
+  }
 }
-
-
-
-
-
 
 // animations
 // animations
@@ -1236,8 +1555,12 @@ $desktop-margin: 35px;
 }
 
 @include keyframe(fadeIn) {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @include keyframe(spin) {
@@ -1265,16 +1588,14 @@ $desktop-margin: 35px;
 }
 
 .animation-fadeInUp {
-  @include animation(0s, .4s, fadeInUp);
+  @include animation(0s, 0.4s, fadeInUp);
 }
-
-
 
 // global styles
 // global styles
 // global styles
 body {
-  font-family: 'C';
+  font-family: "C";
 }
 .layout-default {
   // two fixed containers with one scrolling.
@@ -1285,21 +1606,19 @@ body {
 // typography
 // typography
 
-
 @mixin font-size-responsive($base-font-size) {
   font-size: $base-font-size;
   @for $i from 1 through 10 {
     $min: $i * 100px;
     $min: $min + 1250px;
     $max: $min + 99px;
-    $modifier: .1 * $i;
+    $modifier: 0.1 * $i;
     $increase: $base-font-size * $modifier;
     @include at-query(null, $min, $max) {
       font-size: $base-font-size + $increase;
     }
   }
 }
-
 
 @mixin responsive-fonts($t1, $t2) {
   @include at-query(null, 1400px, 1799px) {
@@ -1329,7 +1648,7 @@ h1 {
   font-size: 18px;
   // @include responsive-fonts(16px, 18px);
   line-height: 1.3;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   font-weight: 400;
 }
 
@@ -1342,11 +1661,11 @@ h1 {
   font-size: 13px;
   line-height: 1.5;
   font-style: italic;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
 }
 @mixin style-h4 {
   font-size: 13px;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   line-height: 1.5;
 }
 @mixin style-body {
@@ -1366,7 +1685,7 @@ h1 {
 
 .navbar__items {
   @include rm {
-    @include transition(transform .3s ease 0s);
+    @include transition(transform 0.3s ease 0s);
     @include transform(translateX(-300px));
   }
   .mobile-navbar-is-open & {
@@ -1383,7 +1702,7 @@ h1 {
   top: 0;
   bottom: 0;
   z-index: 100;
-	@include container-row;
+  @include container-row;
   @include rm {
     padding-left: $mobile-margin;
     padding-right: $mobile-margin;
@@ -1405,10 +1724,10 @@ h1 {
 .page-index {
   .index-enter-element {
     opacity: 0;
-    transition: all .4s ease 1.7s;
+    transition: all 0.4s ease 1.7s;
   }
   .index-enter-element--initial {
-    transition: all .7s ease 1s;
+    transition: all 0.7s ease 1s;
   }
   .index-enter-element--from-left {
     transform: translateX(-20px);
@@ -1430,12 +1749,12 @@ h1 {
 }
 
 .navbar__column {
-	// @include column(4);
-	height: 100vh;
-	// background: rgba(red, .1);
+  // @include column(4);
+  height: 100vh;
+  // background: rgba(red, .1);
   position: relative;
   z-index: 3;
-	@include gvalign;
+  @include gvalign;
 
   float: left;
   padding: 0 ($desktop-gutter/2);
@@ -1445,29 +1764,29 @@ h1 {
   // display: none;
 }
 .navbar__valign {
-	@include gvalign-child;
-	// background: rgba(black, .05);
-  position: relative;  // used to calculation position() from JS
+  @include gvalign-child;
+  // background: rgba(black, .05);
+  position: relative; // used to calculation position() from JS
 }
 .navbar__secondary {
   position: relative;
-  @include transition(margin .3s ease 0s);
+  @include transition(margin 0.3s ease 0s);
 }
 .navbar__link {
-	display: block;
-	text-decoration: none;
-	padding: 2px 0;
-	text-decoration: none;
-	font-size: 14px;
+  display: block;
+  text-decoration: none;
+  padding: 2px 0;
+  text-decoration: none;
+  font-size: 14px;
   color: #999;
 }
 .navbar__link--active {
   color: black;
 }
 .navbar__logo {
-	position: absolute;
-	top: 35px;
-	left: 35px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
   z-index: 1000;
   svg {
     width: 115px;
@@ -1481,7 +1800,6 @@ h1 {
       width: 110px;
       height: 29px;
     }
-
   }
 }
 
@@ -1570,7 +1888,7 @@ h1 {
 // }
 
 .fixed-content-wrapper {
-  @include transition(transform .3s ease 0s);
+  @include transition(transform 0.3s ease 0s);
 }
 
 .mobile-navbar__footer {
@@ -1590,7 +1908,7 @@ h1 {
   color: black;
   display: block;
   font-size: 12px;
-  @include transition(transform .3s ease 0s);
+  @include transition(transform 0.3s ease 0s);
   @include transform(translateX(-130%));
   .mobile-navbar-is-open & {
     @include transform(translateX(0%));
@@ -1613,7 +1931,7 @@ h1 {
 .mobile {
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   overflow-x: hidden;
   padding: 0 20px 0 20px;
   // text
@@ -1678,9 +1996,8 @@ h1 {
 }
 .mobile-contact-quote {
   font-weight: 300;
-  margin: .8em 0;
+  margin: 0.8em 0;
   margin-bottom: 0;
-
 }
 .mobile__contact {
   border-top: 1px solid #eee;
@@ -1693,7 +2010,6 @@ h1 {
   a {
     color: inherit !important;
   }
-
 }
 .mobile__contact--isolated {
   border-top: 0;
@@ -1731,7 +2047,6 @@ h1 {
 }
 // social
 .mobile-social {
-
 }
 .mobile-social__item {
   width: 50px;
@@ -1744,7 +2059,9 @@ h1 {
   svg {
     height: 12px;
     vertical-align: 0;
-    path, polygon, rect {
+    path,
+    polygon,
+    rect {
       fill: black;
     }
   }
@@ -1767,13 +2084,12 @@ h1 {
   padding: 10px 0;
   font-weight: 500;
   display: block;
-  border-top: 2px solid rgba(black, .2);
+  border-top: 2px solid rgba(black, 0.2);
   margin-top: -1px;
 }
 .mobile__next-project {
   color: black;
 }
-
 
 // v2 navbar
 
@@ -1802,7 +2118,7 @@ h1 {
     max-width: 140px !important;
   }
   @include rm {
-    width: 100px !important;  // override js
+    width: 100px !important; // override js
     padding: 0;
     margin-left: 0;
     margin-right: 10px;
@@ -1818,7 +2134,7 @@ h1 {
   line-height: 1.3; // 20px too much in this case
   color: #999;
   cursor: pointer;
-  @include transition(color .2s ease 0s);
+  @include transition(color 0.2s ease 0s);
   &:hover {
     color: black;
   }
@@ -1837,10 +2153,7 @@ h1 {
   position: absolute;
   right: -200px;
   width: 200px;
-  @include transition(
-    opacity .5s ease 0s,
-    transform .5s ease 0s
-  );
+  @include transition(opacity 0.5s ease 0s, transform 0.5s ease 0s);
   top: 0;
   // border: 1px solid blue;
   z-index: 0;
@@ -1878,42 +2191,41 @@ h1 {
 //content
 //content
 .content-wrapper {
-	@include container;
+  @include container;
   z-index: 2;
 }
 
 .content-navbar-grid-spacer {
   overflow: hidden;
-	@include column(2);
+  @include column(2);
   @include rm {
     display: none;
   }
 }
 .content {
-	z-index: 2;
-	position: relative;
+  z-index: 2;
+  position: relative;
 }
 
 .primary-slide {
-	height: 100vh;
-	padding: 60px 0;
+  height: 100vh;
+  padding: 60px 0;
 }
 
 .typed-cursor,
 .typed-fade-out {
-  display: none;  
+  display: none;
 }
-
 
 //index
 //index
 //index
 .index-message {
-  margin-right: -1 * $desktop-margin;  
+  margin-right: -1 * $desktop-margin;
 
   padding-left: 11px;
   opacity: 0;
-  transition: all 1s ease .5s;
+  transition: all 1s ease 0.5s;
 
   font-family: "Domaine Display Condensed";
 
@@ -1931,19 +2243,19 @@ h1 {
 
   // visual letter align
   span {
-    margin-left: -0.10em;
+    margin-left: -0.1em;
   }
 
   p {
     cursor: pointer;
     &:hover {
       text-decoration: underline;
-    }    
+    }
   }
 }
 
 .index-swiper {
-	@include column(8);
+  @include column(8);
   position: relative;
   height: 100vh;
 
@@ -1981,8 +2293,8 @@ h1 {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 
-  @include transition(width .6s ease 0s);
-  width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
+  @include transition(width 0.6s ease 0s);
+  width: calc(75% - 23px); // 6 cols/8 and visually match grid.
 }
 .index-project-row {
   // &:last-child {
@@ -2008,7 +2320,7 @@ h1 {
   top: 0;
   right: 0;
   font-size: 12px;
-  background: rgba(red, .5);
+  background: rgba(red, 0.5);
   color: white;
   padding: 5px 10px;
 
@@ -2025,7 +2337,8 @@ h1 {
   svg {
     width: 20px;
     height: 20px;
-    path, rect {
+    path,
+    rect {
       fill: black;
     }
   }
@@ -2038,11 +2351,11 @@ div[js-index-content] {
   right: 0;
   bottom: 0;
   padding-left: 0;
-  width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
+  width: calc(75% - 23px); // 6 cols/8 and visually match grid.
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-div[js-index-content="index"]{
+div[js-index-content="index"] {
   display: block;
 }
 
@@ -2074,11 +2387,10 @@ div[js-index-content="index"]{
   @include style-caption;
 }
 
-
 // hero module
 .module-hero {
   margin-right: -1 * $desktop-margin;
-  @include transition(margin .1s linear 0s);
+  @include transition(margin 0.1s linear 0s);
   .js-viewing-full-project & {
     margin-left: -1 * $desktop-margin;
   }
@@ -2111,7 +2423,7 @@ div[js-index-content="index"]{
   margin-bottom: 35px;
   @include rm {
     margin-bottom: 8px;
-  };
+  }
   > img {
     position: absolute;
     top: 0;
@@ -2120,15 +2432,13 @@ div[js-index-content="index"]{
     bottom: 0;
   }
   .module-image__img,
-  .module-images-2up__img,
-   {
+  .module-images-2up__img {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
   }
-
 }
 
 .module-image__img {
@@ -2192,7 +2502,7 @@ div[js-index-content="index"]{
   @include style-body;
   cursor: pointer;
   span {
-    @include transition(color .15s ease 0s);
+    @include transition(color 0.15s ease 0s);
     color: $color-gray;
   }
   &:hover {
@@ -2200,7 +2510,9 @@ div[js-index-content="index"]{
       color: black;
     }
     svg {
-      rect, path, polygon {
+      rect,
+      path,
+      polygon {
         fill: black;
       }
     }
@@ -2211,15 +2523,17 @@ div[js-index-content="index"]{
     }
   }
   svg {
-    @include transition(transform .3s ease 0s);
+    @include transition(transform 0.3s ease 0s);
     @include transform(rotate(180deg));
     width: 23px;
     height: 11px;
     vertical-align: middle;
     margin-left: 5px;
-    rect, path, polygon {
-      @include transition(fill .15s ease 0s);
-      fill: rgba(black, .3);
+    rect,
+    path,
+    polygon {
+      @include transition(fill 0.15s ease 0s);
+      fill: rgba(black, 0.3);
     }
   }
 }
@@ -2228,9 +2542,7 @@ div[js-index-content="index"]{
   display: none;
   opacity: 0;
   @include column(3);
-  @include transition(
-    transform .5s ease 0s,
-    opacity .5s ease 0s);
+  @include transition(transform 0.5s ease 0s, opacity 0.5s ease 0s);
   @include transform(translateX(100px));
   max-width: 700px;
   // .js-viewing-full-project &,
@@ -2250,7 +2562,6 @@ div[js-index-content="index"]{
   // }
 
   @include style-body;
-
 
   p {
     margin: 28px 0;
@@ -2279,7 +2590,6 @@ div[js-index-content="index"]{
   @include column(8);
 }
 
-
 .mobile-module-text {
   @include column(8);
   @include style-body;
@@ -2291,7 +2601,7 @@ div[js-index-content="index"]{
 }
 .mobile-module-text__read-more {
   margin-top: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -2303,7 +2613,6 @@ div[js-index-content="index"]{
     right: 0;
     border-bottom: 1px solid black;
   }
-
 }
 
 .mobile-module-text__body {
@@ -2339,7 +2648,6 @@ div[js-index-content="index"]{
   display: block;
 }
 .module-images__image {
-
 }
 
 // website link module
@@ -2374,12 +2682,13 @@ div[js-index-content="index"]{
   line-height: 44px;
   padding-left: 20px;
   position: relative;
-  @include transition(all .15s ease 0s);
+  @include transition(all 0.15s ease 0s);
   &:hover {
     color: white;
     background: black;
     svg {
-      path, polygon {
+      path,
+      polygon {
         fill: white;
       }
     }
@@ -2448,7 +2757,9 @@ div[js-index-content="index"]{
   color: inherit;
   display: block;
   @include style-body;
-  &:visited, &:hover, &:active {
+  &:visited,
+  &:hover,
+  &:active {
     color: inherit;
   }
 }
@@ -2475,6 +2786,11 @@ div[js-index-content="index"]{
     float: none;
     width: 100%;
   }
+}
+
+// module video
+.module-video {
+  margin: 40px 0;
 }
 
 // full project view
@@ -2517,7 +2833,6 @@ div[js-index-content="index"]{
     // display: none;
   }
 }
-
 
 .studio {
   // display: none;
@@ -2599,17 +2914,17 @@ div[js-index-content="index"]{
   float: left;
 }
 .studio__city {
-    float: left;
-    display: inline-block;
-    padding-right: 20px;
+  float: left;
+  display: inline-block;
+  padding-right: 20px;
   // @include at-query($min, 950px) {
   //   float: left;
   //   display: inline-block;
   // }
 }
 .studio__day-and-time {
-    float: left;
-    display: inline-block;
+  float: left;
+  display: inline-block;
   // @include at-query($min, 950px) {
   //   float: left;
   //   margin-left: 25px;
@@ -2632,7 +2947,6 @@ div[js-index-content="index"]{
     margin-top: 20px;
     @include style-mobile-header;
     line-height: 1.3;
-
   }
   p:first-child {
     margin-top: 0;
@@ -2772,7 +3086,7 @@ p.studio__team-bio {
 
   @include rd {
     @include column(4);
-    &:nth-last-of-type(-n+2) {
+    &:nth-last-of-type(-n + 2) {
       margin-bottom: 0;
     }
   }
@@ -2798,7 +3112,6 @@ p.studio__team-bio {
 .studio__service-title {
   font-weight: 500;
 }
-
 
 // clients
 .studio__clients {
@@ -2850,7 +3163,7 @@ p.studio__team-bio {
 }
 .index-journal__journal {
   padding-top: 35px;
-  border-top: 1px solid rgba(black, .1);
+  border-top: 1px solid rgba(black, 0.1);
 
   padding-bottom: 35px;
 
@@ -2862,7 +3175,8 @@ p.studio__team-bio {
   // }
   a {
     color: black;
-    &:active, &:visited {
+    &:active,
+    &:visited {
       color: black;
     }
     &:hover {
@@ -2999,9 +3313,9 @@ p.studio__team-bio {
   z-index: 105;
   @include style-h2;
   font-weight: 500;
-  @include transition(color .15s ease 0s);
+  @include transition(color 0.15s ease 0s);
   &:hover {
-    color: rgba(black, .3);
+    color: rgba(black, 0.3);
   }
 }
 .footer {
@@ -3035,22 +3349,22 @@ p.studio__team-bio {
   }
 }
 .footer__address1 {
-	@include column(1.5);
+  @include column(1.5);
   @include style-h2;
 }
 .footer__address2 {
-	@include column(1.5);
+  @include column(1.5);
   @include style-h2;
 }
 .footer__spacer {
-	@include column(1);
+  @include column(1);
 }
 .footer__spacer--2 {
-  @include column(.2);
+  @include column(0.2);
 }
 
 .footer__email {
-	@include column(2);
+  @include column(2);
 }
 
 .footer-signup__input-wrapper {
@@ -3073,12 +3387,12 @@ p.studio__team-bio {
   outline: none;
   border: none;
   padding-bottom: 10px;
-  font-family: 'C';
+  font-family: "C";
   @include style-h2;
   color: black;
   @include placeholder {
     color: $color-gray;
-    font-family: 'C';
+    font-family: "C";
     font-weight: 500;
     @include style-h2;
   }
@@ -3090,7 +3404,6 @@ p.studio__team-bio {
   font-size: 12px;
   margin-top: 10px;
 }
-
 
 .footer-social {
   margin-top: 24px;
@@ -3111,15 +3424,19 @@ p.studio__team-bio {
   }
   svg {
     height: 10px;
-    path, rect, polygon {
+    path,
+    rect,
+    polygon {
       fill: black;
     }
   }
-  @include transition(background .15s ease 0s);
+  @include transition(background 0.15s ease 0s);
   &:hover {
     background: black;
     svg {
-      path, rect, polygon {
+      path,
+      rect,
+      polygon {
         fill: white;
       }
     }
@@ -3152,7 +3469,7 @@ p.studio__team-bio {
 // animation
 // animation
 .image-background {
-  background: rgba(black, .1);
+  background: rgba(black, 0.1);
   position: absolute;
   top: 0;
   left: 0;
@@ -3164,15 +3481,15 @@ p.studio__team-bio {
   /* fade image in after load */
   .lazyload,
   .lazyloading {
-      opacity: 0;
+    opacity: 0;
   }
   .lazyloaded {
-      opacity: 1;
-      transition: opacity 300ms;
+    opacity: 1;
+    transition: opacity 300ms;
   }
   body {
     opacity: 0;
-    @include transition(opacity .3s ease 0s);
+    @include transition(opacity 0.3s ease 0s);
 
     &.is-loading {
       opacity: 1;
@@ -3183,8 +3500,7 @@ p.studio__team-bio {
   }
 }
 
-
 /* Change the white to any color ;) */
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }

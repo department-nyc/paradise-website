@@ -140,5 +140,15 @@
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
 		</div>
+	{% when 'video' %}
+		<div class="module-video">
+			<div class="module-video__container">
+				<div class="module-video__wrapper">
+					<div class="module-video__ratio" data-responsive-image-color="{{ project.color }}">
+						{{ module.embed }}
+					</div>
+				</div>
+			</div>
+		</div>
 	{% endcase %}
 </div>

@@ -7,7 +7,7 @@ GEM
     coffee-script-source (1.10.0)
     colorator (0.1)
     execjs (2.7.0)
-    ffi (1.9.10)
+    ffi (1.15.4)
     jekyll (3.1.6)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
@@ -42,3 +42,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-coffeescript
+
+BUNDLED WITH
+   1.17.2
