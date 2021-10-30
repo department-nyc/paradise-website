@@ -20,3 +20,10 @@ Content is entered via the Jekyll data files in the \_data directory, or via the
 Users must know which module types are possible, and what values to input into each field. This can be done by looking at other projects in the Siteleaf admin, or in the `_data/X.markdown` files.
 
 Much content is hard coded and requires a developer.
+
+### Video
+
+To insert video, use Vimeo, and paste the entire embed script into the "embed" key of module `type: video`
+
+    - type: video
+    embed: <div>...
