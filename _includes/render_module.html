@@ -150,5 +150,19 @@
 				</div>
 			</div>
 		</div>
+		IN PROGRESS
+		<script src="https://player.vimeo.com/api/player.js."></script>
+		<script>
+			var options = {
+				url: "https://player.vimeo.com/video/76979871?h=8272103f6e",
+				width: 800
+			};
+
+			var videoPlayer = new Vimeo.Player('myVideo', options);
+
+			videoPlayer.on('play', function() {
+				console.log('Played the video');
+			});
+		</script>
 	{% endcase %}
 </div>
