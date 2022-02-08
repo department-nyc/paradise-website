@@ -141,7 +141,7 @@
 			<div class="module-credits__line"></div>
 		</div>
 	{% when 'video' %}
-		<div class="module-video">
+		 <div class="module-video">
 			<div class="module-video__container">
 				<div class="module-video__wrapper">
 					<div class="module-video__ratio" data-responsive-image-color="{{ project.color }}">
@@ -149,9 +149,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> 
 		IN PROGRESS
-		<script src="https://player.vimeo.com/api/player.js."></script>
+		<!-- <script src="https://player.vimeo.com/api/player.js."></script>
 		<script>
 			var options = {
 				url: "https://player.vimeo.com/video/76979871?h=8272103f6e",
@@ -163,6 +163,51 @@
 			videoPlayer.on('play', function() {
 				console.log('Played the video');
 			});
+		</script> -->
+
+{% when 'vimeo-video' %}
+<div class="module-video">
+	<div class="module-video__container">
+		<div class="module-video__wrapper">
+			<div class="embed-container" data-responsive-image-color="{{ project.color }}">
+				<div class="embed-container__curtain"  embed-container__curtain>
+					<div class="embed-container__curtain-play">
+						<img src="../img/play-button.svg" />
+					</div>
+				</div>
+				{{ module.embed }}
+			</div>
+		</div>
+	</div>
+</div>
+		<script src="https://player.vimeo.com/api/player.js"></script>
+		<script>
+			const curtain = document.querySelector('[embed-container__curtain]')
+			const myVideo = document.querySelector('[vimeo-embed]');
+			const player = new Vimeo.Player(myVideo);
+
+			player.on('play', function() {
+			console.log('Played the video');
+			if(curtain.classList.contains('fadeIn')) {
+					curtain.classList.remove('fadeIn')
+				}	
+				curtain.classList.add('fadeOut')
+			});
+
+			player.on('pause', function() {
+				if(curtain.classList.contains('fadeOut')) {
+					curtain.classList.remove('fadeOut')
+				}			
+				curtain.classList.add('fadeIn')
+			}); 
+
+			player.on('ended', function() {
+				if(curtain.classList.contains('fadeIn')) {
+					curtain.classList.remove('fadeIn')
+				}			
+				curtain.classList.add('fadeOut')
+			}); 
+		
 		</script>
 	{% endcase %}
 </div>

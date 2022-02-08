@@ -9,7 +9,7 @@ modules:
     alt:
   - type: video
     embed: |
-      <iframe src="https://player.vimeo.com/video/395219302?h=9071a9062f" width="640" height="429" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/395219302?h=9071a9062f" width="640" height="429"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
       <p><a href="https://vimeo.com/395219302">Returning</a> from <a href="https://vimeo.com/lucybridger">Lucy Bridger</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
   - type: text

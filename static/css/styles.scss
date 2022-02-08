@@ -3513,3 +3513,61 @@ p.studio__team-bio {
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
+/* custom */
+.embed-container {
+  position: relative;
+  padding-bottom: 67.03%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container .embed-container__curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #0a0a0a;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.embed-container__curtain-play {
+  width: 15%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  & img {
+    width: 100%;
+  }
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.embed-container .fadeIn {
+  opacity: 0.5;
+  transition: opacity  ease 1s;
+}
+
+.embed-container .fadeOut {
+  opacity: 0;
+  transition: opacity  ease 1s;
+}
+
+
