@@ -170,8 +170,8 @@
 	<div class="module-video__container">
 		<div class="module-video__wrapper">
 			<div class="embed-container" data-responsive-image-color="{{ project.color }}">
-				<div class="embed-container__curtain"  embed-container__curtain>
-					<div class="embed-container__curtain-play">
+				<div class="embed-container__overlay-icon"  embed-container__overlay-icon>
+					<div class="embed-container__overlay-icon-play">
 						<img src="../img/play-button.svg" />
 					</div>
 				</div>
@@ -182,30 +182,30 @@
 </div>
 		<script src="https://player.vimeo.com/api/player.js"></script>
 		<script>
-			const curtain = document.querySelector('[embed-container__curtain]')
+			const overlayIcon = document.querySelector('[embed-container__overlay-icon]')
 			const myVideo = document.querySelector('[vimeo-embed]');
 			const player = new Vimeo.Player(myVideo);
 
 			player.on('play', function() {
 			console.log('Played the video');
-			if(curtain.classList.contains('fadeIn')) {
-					curtain.classList.remove('fadeIn')
+			if(overlayIcon.classList.contains('js-fadeIn')) {
+					overlayIcon.classList.remove('js-fadeIn')
 				}	
-				curtain.classList.add('fadeOut')
+				overlayIcon.classList.add('js-fadeOut')
 			});
 
 			player.on('pause', function() {
-				if(curtain.classList.contains('fadeOut')) {
-					curtain.classList.remove('fadeOut')
+				if(overlayIcon.classList.contains('js-fadeOut')) {
+					overlayIcon.classList.remove('js-fadeOut')
 				}			
-				curtain.classList.add('fadeIn')
+				overlayIcon.classList.add('js-fadeIn')
 			}); 
 
 			player.on('ended', function() {
-				if(curtain.classList.contains('fadeIn')) {
-					curtain.classList.remove('fadeIn')
+				if(overlayIcon.classList.contains('js-fadeIn')) {
+					overlayIcon.classList.remove('js-fadeIn')
 				}			
-				curtain.classList.add('fadeOut')
+				overlayIcon.classList.add('js-fadeOut')
 			}); 
 		
 		</script>

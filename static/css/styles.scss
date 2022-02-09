@@ -3523,7 +3523,7 @@ input:-webkit-autofill {
   max-width: 100%;
 }
 
-.embed-container .embed-container__curtain {
+.embed-container .embed-container__overlay-icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -3538,7 +3538,7 @@ input:-webkit-autofill {
   pointer-events: none;
 }
 
-.embed-container__curtain-play {
+.embed-container__overlay-icon-play {
   width: 15%;
   height: auto;
   cursor: pointer;
@@ -3560,12 +3560,12 @@ input:-webkit-autofill {
   min-width: 100%;
 }
 
-.embed-container .fadeIn {
+.embed-container .js-fadeIn {
   opacity: 0.5;
   transition: opacity  ease 1s;
 }
 
-.embed-container .fadeOut {
+.embed-container .js-fadeOut {
   opacity: 0;
   transition: opacity  ease 1s;
 }
