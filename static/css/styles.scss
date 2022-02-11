@@ -3530,8 +3530,8 @@ input:-webkit-autofill {
   right: 0;
   bottom: 0;
   z-index: 10;
-  background-color: #0a0a0a;
-  opacity: 0.5;
+  background-color: rgba(10,10,10, 0.5);
+  //opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3561,13 +3561,24 @@ input:-webkit-autofill {
 }
 
 .embed-container .js-fadeIn {
-  opacity: 0.5;
-  transition: opacity  ease 1s;
+  //opacity: 0.5;
+  background-color: rgba(10,10,10, 0.5);
+  transition: background-color  ease 1s;
+  & .embed-container__overlay-icon-play {
+    display: block;
+    transition: display  ease 1.2s;
+  }
 }
 
 .embed-container .js-fadeOut {
-  opacity: 0;
-  transition: opacity  ease 1s;
+  // opacity: 0;
+  background-color: rgba(10,10,10, 0);
+  transition: background-color  ease 1s;
+  & .embed-container__overlay-icon-play {
+    display: none;
+    transition: display  ease 1.2s;
+  }
 }
+
 
 

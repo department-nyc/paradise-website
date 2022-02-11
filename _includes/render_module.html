@@ -157,9 +157,9 @@
 		</div>
 		<script src="https://player.vimeo.com/api/player.js"></script>
 		<script>
-			const overlayIcon = document.querySelector('[embed-container__overlay-icon]')
-			const myVideo = document.querySelector('[vimeo-embed]');
-			const player = new Vimeo.Player(myVideo);
+			var overlayIcon = document.querySelector('[embed-container__overlay-icon]')
+			var myVideo = document.querySelector('[vimeo-embed]');
+			var player = new Vimeo.Player(myVideo);
 
 			player.on('play', function() {
 			if(overlayIcon.classList.contains('js-fadeIn')) {
