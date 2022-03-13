@@ -653,8 +653,8 @@
     (updateTime = function () {
       var $date, $time, time;
       switch (args.location) {
-        case "nyc":
-          time = moment().tz("America/New_York");
+        case "lac":
+          time = moment().tz("America/Los_Angeles");
           break;
         case "sydney":
           time = moment().tz("Australia/Sydney");
