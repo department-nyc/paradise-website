@@ -570,8 +570,8 @@ root.controllers.studioContent = ($element, args) ->
 root.controllers.studioLocation = ($element, args) ->
   do updateTime = ->
     switch args.location
-      when 'nyc'
-        time = moment().tz('America/New_York')
+      when 'lac'
+        time = moment().tz('America/Los_Angeles')
       when 'sydney'
         time = moment().tz('Australia/Sydney')
     $time = $element.find '[js-time]'
