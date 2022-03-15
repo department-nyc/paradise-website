@@ -53,12 +53,15 @@
 						for the world you live in.
 					</p>
 				</div> -->
+				{% assign indexVideoURL = "https://player.vimeo.com/video/395219302?h=9071a9062f" %}
+				{% assign indexVideoSDKOptions = "&portrait=0&byline=0&controls=1&title=0&responsive=1&fun=0&byline=0&transparent=0&muted=1&loop=1&autoplay=1" %}
+				{% assign fullIndexVideoURL =  indexVideoURL | append: indexVideoSDKOptions %}
 
 				<div class="index-video" js-controller="indexTypedText">
 					<div class="index-video__container">
 						<div class="index-video__wrapper">
 							<div class="embed-container" data-responsive-image-color="{{ project.color }}">
-								<div class="embed-container__overlay-icon" embed-container__overlay-icon>
+								<div class="embed-container__overlay-icon" id="embed-container__icon">
 									<div class="embed-container__overlay-icon-play">
 										<?xml version="1.0" encoding="utf-8"?>
 										<!DOCTYPE svg
@@ -72,13 +75,39 @@
 										</svg>
 									</div>
 								</div>
-								<iframe
-									src='https://player.vimeo.com/video/395219302?h=9071a9062f&portrait=0&byline=0&controls=1&title=0&responsive=1&fun=0&byline=0&transparent=0&muted=1&loop=1&autoplay=1'
-									frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen vimeo-embed></iframe>
+								<iframe src='{{ fullIndexVideoURL }}' frameborder="0" allow="autoplay; picture-in-picture"
+									allowfullscreen vimeo-index></iframe>
 							</div>
 						</div>
 					</div>
 				</div>
+				<script src="https://player.vimeo.com/api/player.js"></script>
+				<script>
+					const icon = document.querySelector('#embed-container__icon')
+					const myIndexVideo = document.querySelector('[vimeo-index]');
+					const indexPlayer = new Vimeo.Player(myIndexVideo);
+
+					indexPlayer.on('play', function () {
+						if (icon.classList.contains('js-fadeIn')) {
+							icon.classList.remove('js-fadeIn')
+						}
+						icon.classList.add('js-fadeOut')
+					});
+
+					indexPlayer.on('pause', function () {
+						if (icon.classList.contains('js-fadeOut')) {
+							icon.classList.remove('js-fadeOut')
+						}
+						icon.classList.add('js-fadeIn')
+					});
+
+					indexPlayer.on('ended', function () {
+						if (icon.classList.contains('js-fadeIn')) {
+							icon.classList.remove('js-fadeIn')
+						}
+						icon.classList.add('js-fadeOut')
+					});
+				</script>
 				<!-- Click play to play main video -->
 
 				{% comment %}
