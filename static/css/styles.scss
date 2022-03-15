@@ -3527,9 +3527,10 @@ input:-webkit-autofill {
 }
 
 .module-video, .index-video{
+
   .embed-container {
     position: relative;
-    padding-bottom: 67.03%;
+    padding-bottom: 56.25%; // 16:9 ratio
     height: 0;
     overflow: hidden;
     max-width: 100%;
