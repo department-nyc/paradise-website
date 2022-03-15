@@ -1745,6 +1745,9 @@ h1 {
 .navbar__items {
   @include rm {
     margin-top: 0 !important;
+    .navbar__item-home {
+      display: none;
+    }
   }
 }
 
@@ -1908,6 +1911,9 @@ h1 {
   color: black;
   display: block;
   font-size: 12px;
+  position: relative;
+  bottom: -80px;
+  left: -15%;
   @include transition(transform 0.3s ease 0s);
   @include transform(translateX(-130%));
   .mobile-navbar-is-open & {
@@ -2793,14 +2799,14 @@ div[js-index-content="index"] {
   margin: 40px 0;
 }
 
-.index-video {
+/* .index-video {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: grey;
-}
+} */
 
 // full project view
 // full project view
@@ -3047,17 +3053,12 @@ p.studio__team-bio {
   @include rd {
     @include row;
   }
-  margin-top: 140px;
+  margin-top: 0px; /*140px; */
   @include rm {
     margin-top: 80px;
     margin-bottom: 0;
     font-size: 16px;
   }
-}
-
-// Custom
-.studio__services--none-margin-top {
-  margin-top: none;
 }
 
 .studio__services--2up {
@@ -3521,7 +3522,11 @@ input:-webkit-autofill {
 }
 
 /* custom */
-.module-video {
+.index-video {
+  margin-top: 140px;
+}
+
+.module-video, .index-video{
   .embed-container {
     position: relative;
     padding-bottom: 67.03%;
