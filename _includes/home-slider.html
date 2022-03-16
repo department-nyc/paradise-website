@@ -9,9 +9,9 @@
 					index-enter-element
 					index-enter-element--from-top
 				">
-					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'la'}">
 						<div class="studio__city">
-							New York, USA
+							Los Angeles, USA
 						</div>
 						<div class="studio__day-and-time">
 							<div class="studio__day" js-date>
@@ -40,14 +40,11 @@
 				<div class="
 					index-message
 				" js-controller="indexTypedText">
-					<p 
-						class="
+					<p class="
 							index-enter-element
-							index-enter-element--initial"
-						onclick="
+							index-enter-element--initial" onclick="
 							window.globalAPI.desktopDirectLoadOnHash('#jack-erwin')
-						"
-					>
+						">
 						<span>We</span> build products,<br>
 						brands and experiences<br>
 						for the world you live in.
@@ -68,12 +65,10 @@
 					<div class="swiper-wrapper">
 						{% assign images = site.index-slider-images %}
 						{% for image in images %}
-							<div class="swiper-slide swiper-lazy"
-								data-background="{{ image.image }}"
-								{% if image.project %}js-project-link="{{ image.project | slugify }}"{% endif %}
-							>
+						<div class="swiper-slide swiper-lazy" data-background="{{ image.image }}" {% if image.project
+							%}js-project-link="{{ image.project | slugify }}" {% endif %}>
 
-							</div>
+						</div>
 						{% endfor %}
 					</div>
 				</div>
@@ -82,4 +77,3 @@
 		</div>
 	</div>
 </div>
-
