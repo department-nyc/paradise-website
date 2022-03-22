@@ -1,15 +1,9 @@
 ---
-title: Paradise
+title: Pariah Website
 timezone: UTC
 collections:
-  journals:
-    title: Journals
-    output: true
   posts:
     title: Posts
-    output: true
-  projects:
-    title: Projects
     output: true
   uploads:
     title: Uploads
@@ -17,84 +11,13 @@ collections:
 defaults:
 - scope:
     path: ''
-    type: journals
+    type: posts
   values:
-    layout: journal
-    image: ''
-    images:
-    - image: ''
-      alt: ''
-    hide-title: ''
+    layout: post
+    permalink: "/posts/:title/"
 - scope:
     path: ''
-    type: projects
+    type: pages
   values:
-    layout: project
-tagline: 
-url: http://studioparadise.com
-social-image: "/uploads/12486055_1017483594961747_9183100960315489762_o.png"
-social-description: Hey you've found Paradise - not that type of Paradise, put your
-  clothes back on, but feel free to say hello.
-facebook: studioparadisenyc
-twitter: paradisenewyork
-instagram: studioparadisenyc
-linkedin: studio-paradise
-behance: studioparadise
-studio:
-  clients:
-  - name: Thom Browne
-  - name: Merrell
-  - name: The 5th
-  - name: Temme Media
-  - name: Marc Jacobs
-  - name: RVCA
-  - name: Nixon
-  - name: Akin Creative
-  - name: Jack Erwin
-    project: Jack Erwin
-  - name: Saturdays
-    project: Saturdays
-  - name: Mikoh
-    project: Mikoh
-  - name: Dudleys
-  - name: Express
-  - name: Convicts
-    project: Convicts
-  - name: Kaelen
-    project: Kaelen
-  - name: Flower Shop
-    project: Flower Shop
-  - name: Abbott
-  - name: Well Well
-  - name: Tsovet
-  - name: FLWR
-  - name: Raen
-  - name: Leader Bag Co.
-    project: Leader Bag
-index-slider-images:
-- image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
-  alt: 
-  project: Kaelen
-- image: "/uploads/1JE_Home.jpg"
-  alt: 
-  project: Jack Erwin
-- image: "/uploads/Mikoh_HomepageHero_20160803.jpg"
-  alt: 
-  project: Mikoh
-- image: "/uploads/Leader_HomepageHero_20160803.jpg"
-  alt: 
-  project: Leader Bag
-- image: "/uploads/Prize_HomepageHero_20160803.jpg"
-  alt: 
-  project: Prize
-- image: "/uploads/Saturdays_HomepageHero_20160803.jpg"
-  alt: 
-  project: Saturdays
-gems:
-- jekyll-coffeescript
-exclude:
-- README.md
-- node_modules
-- gruntfile.js
-- package.json
-- vendor/
+    layout: page
+permalink: pretty
