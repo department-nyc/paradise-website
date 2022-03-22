@@ -1,17 +1,17 @@
 ---
-title: Studio Paradise
+title: Studio Pariah
 layout: mobile
-fulltitle: Studio Paradise
-excerpt: Studio Paradise
+fulltitle: Studio Pariah
+excerpt: Studio Pariah
 ---
 
 <div class="mobile">
 	{% assign projects = site.projects | sort: "position" %}
 	{% for project in projects %}
-		<a class="mobile-project mobile-project--index" href="{{ project.url }}">
-			{% for module in project.modules limit: 1 %}
-				{% include render_module.html mobile=true %}
-			{% endfor %}
-		</a>
+	<a class="mobile-project mobile-project--index" href="{{ project.url }}">
+		{% for module in project.modules limit: 1 %}
+		{% include render_module.html mobile=true %}
+		{% endfor %}
+	</a>
 	{% endfor %}
 </div>

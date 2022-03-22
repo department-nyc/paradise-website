@@ -5,130 +5,138 @@
 <div class="module {{ cls }} {{ cls }}--{{ module.variation }}">
 	{% case module.type %}
 	{% when 'hero' %}
-		<div class="hero__column">
-			{% if include.mobile %}
-				<!-- <div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
+	<div class="hero__column">
+		{% if include.mobile %}
+		<!-- <div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.mobile_image }}" alt="{{ module.alt | default: '' }}" />
 				</div>-->
-				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}" data-responsive-image-color="{{ project.color }}">
-					<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
-				</div>
-				<div class="mobile-project__title">
-					{{ project.title }}
-				</div>
-			{% else %}
-				<div data-responsive-image-color="{{ project.color }}">
-					<div class="module-hero__background lazyload" data-bg="{{ module.image }}">
-					</div>
-				</div>
-				<!--
+		<div class="module-image__ratio"
+			data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}"
+			data-responsive-image-color="{{ project.color }}">
+			<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
+		</div>
+		<div class="mobile-project__title">
+			{{ project.title }}
+		</div>
+		{% else %}
+		<div data-responsive-image-color="{{ project.color }}">
+			<div class="module-hero__background lazyload" data-bg="{{ module.image }}">
+			</div>
+		</div>
+		<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 				</div>
 				-->
-			{% endif %}
-		</div>
-	{% when 'image' %}
-		<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}" data-responsive-image-color="{{ project.color }}">
-			<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
-		</div>
-		{% if module.caption.size > 0 %}
-			<div class="module__image-caption">
-				{{ module.caption }}
-			</div>
 		{% endif %}
+	</div>
+	{% when 'image' %}
+	<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}"
+		data-responsive-image-color="{{ project.color }}">
+		<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}"
+			data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
+	</div>
+	{% if module.caption.size > 0 %}
+	<div class="module__image-caption">
+		{{ module.caption }}
+	</div>
+	{% endif %}
 	{% when 'images-2up' %}
-		{% for image in module.images %}
-			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="{{ image.dimensions | default: '1200x1600' }}" data-responsive-image-color="{{ project.color }}">
-					<img class="module-images-2up__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
-				</div>
-				{% if image.caption.size > 0 %}
-					<div class="module__image-caption">
-						{{ image.caption }}
-					</div>
-				{% endif %}
-			</div>
-		{% endfor %}
+	{% for image in module.images %}
+	<div class="module-images-2up__image">
+		<div class="module-image__ratio"
+			data-responsive-image-dimensions="{{ image.dimensions | default: '1200x1600' }}"
+			data-responsive-image-color="{{ project.color }}">
+			<img class="module-images-2up__img lazyload" data-src="{{ image.image }}"
+				alt="{{ image.alt | default: '' }}" />
+		</div>
+		{% if image.caption.size > 0 %}
+		<div class="module__image-caption">
+			{{ image.caption }}
+		</div>
+		{% endif %}
+	</div>
+	{% endfor %}
 	{% when 'text' %}
-		<div class="row">
-			<div class="module-text__spacer">
-				<span class="show-on-full-project fade-in-on-full-project module-text__title">
-					<!-- {{ module['full-project-title'] | default: ""}} -->
-					{{ project.title }}
-				</span>
-				&nbsp;
-			</div>
-			{% if include.mobile %}
-				{% if module.body %}
-					<div class="mobile-module-text" js-controller="mobileProjectBody">
-						<div class="mobile-module-text__excerpt">
-							{{ module.excerpt | default: "" | markdownify }}
-						</div>
-
-						<div class="mobile-module-text__read-more" js-mobile-module-read-more>
-							Read More
-						</div>
-
-						<div class="mobile-module-text__body" js-mobile-module-body>
-							{{ module.body | markdownify }}
-						</div>
-					</div>
-				{% endif %}
-			{% else %}
-				<div class="module-text__excerpt">
-					{{ module.excerpt | default: "" | markdownify }}
-					<div class="module-text__view-full" js-index-view-full-project>
-						<span class="hide-on-full-project">
-							View Full Project
-							{% include svg.html type="arrow--right" %}
-						</span>
-						<span class="show-on-full-project">
-							Exit Full Project View
-							{% include svg.html type="arrow--right" %}
-						</span>
-					</div>
-				</div>
-
-				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
-					{% if module.body %}
-						<div class="module-text__body animate-in">
-							{{ module.body | markdownify }}
-						</div>
-					{% endif %}
-			{% endif %}
+	<div class="row">
+		<div class="module-text__spacer">
+			<span class="show-on-full-project fade-in-on-full-project module-text__title">
+				<!-- {{ module['full-project-title'] | default: ""}} -->
+				{{ project.title }}
+			</span>
+			&nbsp;
 		</div>
+		{% if include.mobile %}
+		{% if module.body %}
+		<div class="mobile-module-text" js-controller="mobileProjectBody">
+			<div class="mobile-module-text__excerpt">
+				{{ module.excerpt | default: "" | markdownify }}
+			</div>
+
+			<div class="mobile-module-text__read-more" js-mobile-module-read-more>
+				Read More
+			</div>
+
+			<div class="mobile-module-text__body" js-mobile-module-body>
+				{{ module.body | markdownify }}
+			</div>
+		</div>
+		{% endif %}
+		{% else %}
+		<div class="module-text__excerpt">
+			{{ module.excerpt | default: "" | markdownify }}
+			<div class="module-text__view-full" js-index-view-full-project>
+				<span class="hide-on-full-project">
+					View Full Project
+					{% include svg.html type="arrow--right" %}
+				</span>
+				<span class="show-on-full-project">
+					Exit Full Project View
+					{% include svg.html type="arrow--right" %}
+				</span>
+			</div>
+		</div>
+
+		<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
+		{% if module.body %}
+		<div class="module-text__body animate-in">
+			{{ module.body | markdownify }}
+		</div>
+		{% endif %}
+		{% endif %}
+	</div>
 	{% when 'website-link' %}
-		<div class="module-website-link__spacer">&nbsp;</div>
-		<div class="module-website-link__column">
-			<a class="module-website-link__button" href="{{ module.url | default: "" }}" target="_blank">
-				Visit the Website
-				<span class="module-website-link__icon">
-					{% include svg.html type='arrow--up-right' %}
-				</span>
-			</a>
-		</div>
+	<div class="module-website-link__spacer">&nbsp;</div>
+	<div class="module-website-link__column">
+		<a class="module-website-link__button" href="{{ module.url | default: "" }}" target="_blank">
+			Visit the Website
+			<span class="module-website-link__icon">
+				{% include svg.html type='arrow--up-right' %}
+			</span>
+		</a>
+	</div>
 	{% when 'credits' %}
-		<div class="module-credits__line-container">
-			<div class="module-credits__line"></div>
+	<div class="module-credits__line-container">
+		<div class="module-credits__line"></div>
+	</div>
+	<div class="module-credits__credits">
+		<div class="module-credits__column">
+			<div class="module-credits__title">
+				Project Credits
+			</div>
 		</div>
-		<div class="module-credits__credits">
-			<div class="module-credits__column">
-				<div class="module-credits__title">
-					Project Credits
-				</div>
-			</div>
-			<div class="module-credits__content">
-				{% for credit in module.credits %}
-					<a class="module-credits__credit" js-module-credits-item target="_blank" {% if credit.url %}href="{{ credit.url }}"{% endif %}>
-						<span class="module-credits__emphasis">
-							{{ credit.emphasis | default: "" }}
-						</span>
-						{{ credit.name | default: "" }}
-					</a>
-				{% endfor %}
-			</div>
-			<!--
+		<div class="module-credits__content">
+			{% for credit in module.credits %}
+			<a class="module-credits__credit" js-module-credits-item target="_blank" {% if credit.url
+				%}href="{{ credit.url }}" {% endif %}>
+				<span class="module-credits__emphasis">
+					{{ credit.emphasis | default: "" }}
+				</span>
+				{{ credit.name | default: "" }}
+			</a>
+			{% endfor %}
+		</div>
+		<!--
 			<div class="module-credits__column" js-module-credit-column>
 			</div>
 			<div class="module-credits__column" js-module-credit-column>
@@ -136,58 +144,62 @@
 			<div class="module-credits__column show-on-full-project" js-module-credit-column>
 			</div>
 			-->
-		</div>
-		<div class="module-credits__line-container">
-			<div class="module-credits__line"></div>
-		</div>
+	</div>
+	<div class="module-credits__line-container">
+		<div class="module-credits__line"></div>
+	</div>
 	{% when 'video' %}
-		<div class="module-video">
-			<div class="module-video__container">
-				<div class="module-video__wrapper">
-					<div class="embed-container" data-responsive-image-color="{{ project.color }}">
-						<div class="embed-container__overlay-icon"  embed-container__overlay-icon>
-							<div class="embed-container__overlay-icon-play">
-								<?xml version="1.0" encoding="utf-8"?>
-								<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
-								<path fill="#444444" d="M8 1c3.9 0 7 3.1 7 7s-3.1 7-7 7-7-3.1-7-7 3.1-7 7-7zM8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8v0z"></path>
+	<div class="module-video module-image">
+		<div class="module-video__container">
+			<div class="module-video__wrapper">
+				<div class="embed-container" data-responsive-image-color="{{ project.color }}">
+					<div class="embed-container__overlay-icon" embed-container__overlay-icon>
+						<div class="embed-container__overlay-icon-play">
+							<?xml version="1.0" encoding="utf-8"?>
+							<!DOCTYPE svg
+								PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+								<path fill="#444444"
+									d="M8 1c3.9 0 7 3.1 7 7s-3.1 7-7 7-7-3.1-7-7 3.1-7 7-7zM8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8v0z">
+								</path>
 								<path fill="#444444" d="M6 4v8l6-4z"></path>
-								</svg>
+							</svg>
 
-							</div>
 						</div>
-						{{ module.embed }}
 					</div>
+					{{ module.embed }}
 				</div>
 			</div>
 		</div>
-		<script src="https://player.vimeo.com/api/player.js"></script>
-		<script>
-			var overlayIcon = document.querySelector('[embed-container__overlay-icon]')
-			var myVideo = document.querySelector('[vimeo-embed]');
-			var player = new Vimeo.Player(myVideo);
+	</div>
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script>
+		var overlayIcon = document.querySelector('[embed-container__overlay-icon]')
+		var myVideo = document.querySelector('[vimeo-embed]');
+		var player = new Vimeo.Player(myVideo);
 
-			player.on('play', function() {
-			if(overlayIcon.classList.contains('js-fadeIn')) {
-					overlayIcon.classList.remove('js-fadeIn')
-				}	
-				overlayIcon.classList.add('js-fadeOut')
-			});
+		player.on('play', function () {
+			if (overlayIcon.classList.contains('js-fadeIn')) {
+				overlayIcon.classList.remove('js-fadeIn')
+			}
+			overlayIcon.classList.add('js-fadeOut')
+		});
 
-			player.on('pause', function() {
-				if(overlayIcon.classList.contains('js-fadeOut')) {
-					overlayIcon.classList.remove('js-fadeOut')
-				}			
-				overlayIcon.classList.add('js-fadeIn')
-			}); 
+		player.on('pause', function () {
+			if (overlayIcon.classList.contains('js-fadeOut')) {
+				overlayIcon.classList.remove('js-fadeOut')
+			}
+			overlayIcon.classList.add('js-fadeIn')
+		});
 
-			player.on('ended', function() {
-				if(overlayIcon.classList.contains('js-fadeIn')) {
-					overlayIcon.classList.remove('js-fadeIn')
-				}			
-				overlayIcon.classList.add('js-fadeOut')
-			}); 
-		
-		</script>
+		player.on('ended', function () {
+			if (overlayIcon.classList.contains('js-fadeIn')) {
+				overlayIcon.classList.remove('js-fadeIn')
+			}
+			overlayIcon.classList.add('js-fadeOut')
+		});
+
+	</script>
 	{% endcase %}
 </div>

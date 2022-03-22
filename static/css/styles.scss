@@ -1798,7 +1798,7 @@ h1 {
     left: 20px;
     svg {
       width: 110px;
-      height: 29px;
+      height: 39px;
     }
   }
 }
@@ -2790,7 +2790,8 @@ div[js-index-content="index"] {
 
 // module video
 .module-video {
-  margin: 40px 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .index-video {
@@ -3531,13 +3532,16 @@ input:-webkit-autofill {
     right: 0;
     bottom: 0;
     z-index: 10;
-    background-color: rgba(10, 10, 10, 0.7);
+    // bg color of the overlay
+    // background-color: rgba(10, 10, 10, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: none;
     cursor: pointer;
+
     path {
+      display: none;
       fill: white;
     }
   }

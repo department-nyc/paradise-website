@@ -1,10 +1,6 @@
-<div 
-	class="navbar" 
-	js-controller="navbar2"
-	js-args="{ 
+<div class="navbar" js-controller="navbar2" js-args="{ 
 		mobile: {% if include.mobile 0 %}true{% else %}false{% endif %}
-	}"
->
+	}">
 	<div class="mobile-navbar-open">
 		<div class="mobile-navbar-open__open" js-mobile-navbar-open>
 			<div class="mobile-navbar-open__line"></div>
@@ -13,9 +9,10 @@
 		</div>
 		<div class="mobile-navbar-open__close" js-mobile-navbar-open>
 			<?xml version="1.0" encoding="utf-8"?>
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 viewBox="0 0 9.9 9.9" style="enable-background:new 0 0 9.9 9.9;" xml:space="preserve">
-			<polygon points="9.9,0.6 9.4,0 5,4.4 0.6,0 0,0.6 4.4,5 0,9.4 0.6,9.9 5,5.5 9.4,9.9 9.9,9.4 5.5,5 "/>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9.9 9.9"
+				style="enable-background:new 0 0 9.9 9.9;" xml:space="preserve">
+				<polygon points="9.9,0.6 9.4,0 5,4.4 0.6,0 0,0.6 4.4,5 0,9.4 0.6,9.9 5,5.5 9.4,9.9 9.9,9.4 5.5,5 " />
 			</svg>
 		</div>
 	</div>
@@ -29,23 +26,24 @@
 	<div class="mobile-navbar-open" js-mobile-navbar-open>
 
 		{% comment %}
-			<div class="mobile-navbar-open__open">
-				<?xml version="1.0" encoding="utf-8"?>
-				<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 viewBox="0 0 9.3 8.3" style="enable-background:new 0 0 9.3 8.3;" xml:space="preserve">
+		<div class="mobile-navbar-open__open">
+			<?xml version="1.0" encoding="utf-8"?>
+			<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 9.3 8.3"
+				style="enable-background:new 0 0 9.3 8.3;" xml:space="preserve">
 				<title>Paradise_Mobile_160630</title>
 				<g>
-					<rect width="9.3" height="0.4"/>
+					<rect width="9.3" height="0.4" />
 				</g>
 				<g>
-					<rect y="3.9" width="9.3" height="0.4"/>
+					<rect y="3.9" width="9.3" height="0.4" />
 				</g>
 				<g>
-					<rect y="7.9" width="9.3" height="0.4"/>
+					<rect y="7.9" width="9.3" height="0.4" />
 				</g>
-				</svg>
-			</div>
+			</svg>
+		</div>
 		{% endcomment %}
 
 	</div>
@@ -54,8 +52,7 @@
 	" js-wrapper>
 		<div class="
 			index-enter-element
-			index-enter-element--from-left"
-		>
+			index-enter-element--from-left">
 			<div class="navbar__item" js-item-with-dropdown js-navbar-item-root>
 				<div class="navbar__label" js-item-label js-args="{
 					rootNode: true,
@@ -67,22 +64,26 @@
 				<div class="navbar__dropdown" js-item-dropdown>
 					{% assign projects = site.projects | sort: "position" %}
 					{% for project in projects %}
-						<div class="navbar__item {% if page.url == project.url %}is-active{% endif %}">
-							{% if include.mobile %}
-								<a class="navbar__label " href="{{ project.url }}">
-									{{ project.title }}
-								</a>
-							{% else %}
-								<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects', mobileURL: '/projects/{{ project.title | slugify }}.html'}" js-scrollspy-nav="{{ project.title | slugify }}">
-									{{ project.title }}
-								</div>
-							{% endif %}
+					<div class="navbar__item {% if page.url == project.url %}is-active{% endif %}">
+						{% if include.mobile %}
+						<a class="navbar__label " href="{{ project.url }}">
+							{{ project.title }}
+						</a>
+						{% else %}
+						<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}"
+							js-args="{overlay: 'projects', mobileURL: '/projects/{{ project.title | slugify }}.html'}"
+							js-scrollspy-nav="{{ project.title | slugify }}">
+							{{ project.title }}
 						</div>
+						{% endif %}
+					</div>
 					{% endfor %}
 				</div>
 			</div>
 			<div class="navbar__item" js-item-with-dropdown js-navbar-item-root>
-				<div class="navbar__label" js-item-label js-args="{rootNode: true, overlay: 'studio', mobileURL: '/mobile_studio.html#intro'}" js-navbar-studio>
+				<div class="navbar__label" js-item-label
+					js-args="{rootNode: true, overlay: 'studio', mobileURL: '/mobile_studio.html#intro'}"
+					js-navbar-studio>
 					About
 				</div>
 				<div class="navbar__dropdown" js-item-dropdown>
@@ -95,6 +96,7 @@
 							Intro
 						</div>
 					</div>
+
 					<div class="navbar__item" js-item-with-dropdown>
 						<div class="navbar__label" js-item-label js-args="{
 							overlay: 'studio',
@@ -136,47 +138,46 @@
 					</div>
 				</div>
 			</div>
-			<div class="navbar__item" js-item-with-dropdown js-navbar-item-root >
-				<div 
-					class="navbar__label"
-					js-item-label
-					js-args="{
-						rootNode: true,
-						overlay: 'journal',
-						mobileURL: '/mobile_journal.html'
-					}"
-					style="margin-left: -2px;"
-				>
+			{% comment %}
+			<div class="navbar__item" js-item-with-dropdown js-navbar-item-root>
+				<div class="navbar__label" js-item-label js-args="{
+							rootNode: true,
+							overlay: 'journal',
+							mobileURL: '/mobile_journal.html'
+						}" style="margin-left: -2px;">
 					Journal
 				</div>
 				<div class="navbar__dropdown" js-item-dropdown>
 					{% assign posts = site.journals %}
 					{% for post in posts reversed %}
-						{% assign year = post.date | date: '%Y' %}
-						{% assign nyear = post.previous.date | date: '%Y' %}
-					    {% assign month = post.date | date: '%Y %b' %}
-					    {% assign nmonth = post.previous.date | date: '%Y %b' %}
+					{% assign year = post.date | date: '%Y' %}
+					{% assign nyear = post.previous.date | date: '%Y' %}
+					{% assign month = post.date | date: '%Y %b' %}
+					{% assign nmonth = post.previous.date | date: '%Y %b' %}
 
-					    {% if month != nmonth %}
-							<div class="navbar__item" js-item>
-								<div class="navbar__label" js-item-label js-args="{
-									overlay: 'journal',
-									mobileURL: '/mobile_journal.html#{{ post.date | '%Y-%B' }}',
-								    scrollAlignToNav: {% if forloop.first %}false{% else %}true{% endif %},
-								    scrollAlignToNavOffset: 60
-								}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
-									{{ post.date | date: "%B" }}
-								    {% if year != nyear %}
-									    {{ post.date | date: "'%y" }}
-								    {% endif %}
-								</div>
-							</div>
-						{% endif %}
+					{% if month != nmonth %}
+					<div class="navbar__item" js-item>
+						<div class="navbar__label" js-item-label js-args="{
+										overlay: 'journal',
+										mobileURL: '/mobile_journal.html#{{ post.date | '%Y-%B' }}',
+										scrollAlignToNav: {% if forloop.first %}false{% else %}true{% endif %},
+										scrollAlignToNavOffset: 60
+									}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
+							{{ post.date | date: "%B" }}
+							{% if year != nyear %}
+							{{ post.date | date: "'%y" }}
+							{% endif %}
+						</div>
+					</div>
+					{% endif %}
 					{% endfor %}
 				</div>
 			</div>
+			{% endcomment %}
 			<div class="navbar__item hide-on-desktop" js-item-with-dropdown>
-				<div class="navbar__label" js-item-label js-item-label js-args="{rootNode: true, mobileURL: '/mobile_contact.html' }" style="margin-left: -2px;">Contact</div>
+				<div class="navbar__label" js-item-label js-item-label
+					js-args="{rootNode: true, mobileURL: '/mobile_contact.html' }" style="margin-left: -2px;">Contact
+				</div>
 				<div class="navbar__dropdown navbar__dropdown--mobile-contact" js-item-dropdown>
 					New York<br>
 					153 Centre St<br>
@@ -193,8 +194,8 @@
 		</div>
 	</div>
 	<div class="mobile-navbar__footer">
-		<a class="mobile-navbar__email-address" href="mailto:hello@studioparadise.com">
-			hello@studioparadise.com
+		<a class="mobile-navbar__email-address" href="mailto:hello@studiopariah.com">
+			hello@studiopariah.com
 		</a>
 	</div>
 </div>

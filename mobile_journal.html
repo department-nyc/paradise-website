@@ -1,8 +1,8 @@
 ---
 title: Journal
 layout: mobile
-fulltitle: Studio Paradise
-excerpt: Studio Paradise
+fulltitle: Studio Pariah
+excerpt: Studio Pariah
 ---
 
 <div js-index-content="journal">
@@ -11,10 +11,10 @@ excerpt: Studio Paradise
 			{% assign posts = site.journals %}
 
 			{% for post in posts reversed %}
-			    {% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
-			    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
-			    {% if month != nmonth %}
-					<div class="index-journal__month" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
+			{% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+			{% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+			{% if month != nmonth %}
+			<div class="index-journal__month" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
 				{% endif %}
 				{% assign images = post['images'] %}
 				<div class="index-journal__journal {% if images.size > 0 %}with-image {% endif %}">
@@ -23,36 +23,38 @@ excerpt: Studio Paradise
 							{{ post.date | date: "%B %d %Y" }}
 						</div>
 						{% unless post['hide-title'].size > 1 %}
-							<h1 class="index-journal__title">
-								{{ post.title }}
-							</h1>
+						<h1 class="index-journal__title">
+							{{ post.title }}
+						</h1>
 						{% endunless %}
 					</div>
-					<div class="index-journal__hero-img" data-responsive-image-dimensions="{{ post.image_dimensions | default: "450x300" }}">
+					<div class="index-journal__hero-img"
+						data-responsive-image-dimensions="{{ post.image_dimensions | default: " 450x300" }}">
 						<img class="lazyload" data-src="{{ post['image'] }}" />
 					</div>
 
 					{% if post.content.size > 5 %}
-						<div class="row">
-							<div class="index-journal__content">
-								{{ post.content }}
-							</div>
+					<div class="row">
+						<div class="index-journal__content">
+							{{ post.content }}
 						</div>
+					</div>
 					{% endif %}
 
 					{% if images.size > 0 %}
-						{% for image in images %}
-							{% if image.image != '' %}
-								<div class="index-journal__img " data-responsive-image-dimensions="{{ image.dimensions | default: "450x300" }}">
-									<img class="lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
-								</div>
-							{% endif %}
-						{% endfor %}
+					{% for image in images %}
+					{% if image.image != '' %}
+					<div class="index-journal__img " data-responsive-image-dimensions="{{ image.dimensions | default: "
+						450x300" }}">
+						<img class="lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+					</div>
+					{% endif %}
+					{% endfor %}
 					{% endif %}
 				</div>
-			    {% if month != nmonth %}
-					</div>
-				{% endif %}
+				{% if month != nmonth %}
+			</div>
+			{% endif %}
 			{% endfor %}
 		</div>
 	</div>
