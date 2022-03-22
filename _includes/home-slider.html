@@ -2,6 +2,8 @@
 	<div class="content">
 		<div class="row index-slider">
 			<div class="content-navbar-grid-spacer">&nbsp;</div>
+
+			<!-- Navbar locations -->
 			<div class="index-swiper">
 				<div class="
 					studio__locations
@@ -36,8 +38,8 @@
 						</div>
 					</div>
 				</div>
-
 				{% comment %}
+				<!-- Intro text -->
 				<div class="
 					index-message
 				" js-controller="indexTypedText">
@@ -50,15 +52,8 @@
 					</p>
 				</div>
 				{% endcomment %}
-				{% comment %}
-				<div class="index-video">
-					<!-- Autoplay silent? -->
-					<!-- Click play to play main video -->
-				</div>
-				{% endcomment %}
 
-
-
+				<!-- Gallery -->
 				<div class="swiper-container" js-controller="indexSwiper" js-args="{}">
 					<div class="swiper-wrapper">
 						{% assign images = site.index-slider-images %}
