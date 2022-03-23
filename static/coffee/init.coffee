@@ -143,7 +143,7 @@ root.utils.getControllerInstance = (controllerName, $scope) ->
   ###
   if not $scope
     $scope = $ 'html'
-
+  
   $controllers = $scope.find "[js-controller=\"#{controllerName}\"]"
 
   instances = ($(controller).data 'js-controller' for controller in $controllers)
@@ -426,6 +426,7 @@ root.init = ->
 
 $ ->
   root.init()
+  console.log("Initialized 2022")
 
 window.debug = (msg) ->
 	$("[js-debug-txt]").html msg
