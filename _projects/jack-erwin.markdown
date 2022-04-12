@@ -82,5 +82,8 @@ modules:
     emphasis: 'Print Design '
     name: Paradise
   Key: 
+- alt: Alt text
+  type: hero
+  image: "/uploads/Leader_4_20160715.jpg"
 ---
 
