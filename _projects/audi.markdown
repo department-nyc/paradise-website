@@ -43,8 +43,7 @@ modules:
 - type: image
   image: "/uploads/WGP_1500.jpg"
 - type: image
-  image: "/uploads/JE_Web_20160802_A.jpg"
-  dimensions: 1800x2846
+  image: "/uploads/IMG_6240%202.JPG"
 - type: website-link
   url: http://www.audiusa.com
 - type: credits
