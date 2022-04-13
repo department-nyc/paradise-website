@@ -56,9 +56,6 @@ modules:
 - type: image
   image: "/uploads/JE_Web_20160802_A.jpg"
   dimensions: 1800x2846
-- type: image
-  image: "/uploads/JE_Web2_20160802.jpg"
-  dimensions: 2343x1596
 - type: website-link
   url: http://jackerwin.com
 - type: credits
