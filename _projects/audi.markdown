@@ -7,7 +7,7 @@ social-image: "/uploads/AUDI_SLITHER-356ce9.jpg"
 social-description: Audi
 modules:
 - type: hero
-  image: "/uploads/AUDI_SLITHER-356ce9.jpg"
+  image: "/uploads/AUDI_SLITHER-ab5712.jpg"
   alt: 
 - type: text
   excerpt: Audi **Electric Eye** - a visual journey to showcase that there is hope
