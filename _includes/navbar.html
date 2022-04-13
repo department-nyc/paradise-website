@@ -101,16 +101,6 @@
 						<div class="navbar__label" js-item-label js-args="{
 							overlay: 'studio',
 							scrollAlignToNav: true,
-							mobileURL: '/mobile_studio.html#different'
-						}" js-scrollspy-nav="different">
-							Different
-						</div>
-					</div>
-
-					<div class="navbar__item" js-item-with-dropdown>
-						<div class="navbar__label" js-item-label js-args="{
-							overlay: 'studio',
-							scrollAlignToNav: true,
 							mobileURL: '/mobile_studio.html#services'
 						}" js-scrollspy-nav="services">
 							Services
@@ -121,11 +111,23 @@
 						<div class="navbar__label" js-item-label js-args="{
 							overlay: 'studio',
 							scrollAlignToNav: true,
+							mobileURL: '/mobile_studio.html#different'
+						}" js-scrollspy-nav="different">
+							Different
+						</div>
+					</div>
+
+					{% comment %}
+					<div class="navbar__item" js-item-with-dropdown>
+						<div class="navbar__label" js-item-label js-args="{
+							overlay: 'studio',
+							scrollAlignToNav: true,
 							mobileURL: '/mobile_studio.html#team'
 						}" js-scrollspy-nav="team">
 							Team
 						</div>
 					</div>
+					{% endcomment %}
 
 					<div class="navbar__item" js-item-with-dropdown>
 						<div class="navbar__label" js-item-label js-args="{
