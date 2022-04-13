@@ -21,15 +21,11 @@ modules:
     * Visual Identity
     * Digital
 - type: video
-  embed: <iframe src="https://player.vimeo.com/video/395219302?h=9071a9062f&portrait=0&byline=0&controls=1&title=0&responsive=1&fun=0&byline=0&transparent=0"  frameborder="0"
-    allow="autoplay; picture-in-picture" allowfullscreen vimeo-embed></iframe><p><a
-    href="https://vimeo.com/395219302">Returning</a> from <a href="https://vimeo.com/lucybridger">Lucy
-    Bridger</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+  embed: <iframe src="https://player.vimeo.com/video/698857987?h=4cc1194776" width="640"
+    height="267" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
 - type: image
-  image: "/uploads/JE_Logo_GId_20180822_MLP_A.gif"
-- type: image
-  image: "/uploads/2JE_Logo.jpg"
-  dimensions: 2400x1591
+  image: "/uploads/WGP_1500.jpg"
 - type: image
   url: 
   image: "/uploads/JE_2_20160718.jpg"
