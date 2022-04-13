@@ -3,7 +3,7 @@ title: Audi
 date: 2016-05-28 05:00:00 Z
 position: 0
 color: "#e1e1e1"
-social-image: "/uploads/WGP_1081-2048x1365.jpg"
+social-image: "/uploads/AUDI_SLITHER-356ce9.jpg"
 social-description: Audi
 modules:
 - type: video
