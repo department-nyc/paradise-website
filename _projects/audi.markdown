@@ -1,13 +1,13 @@
 ---
-title: Jack Erwin
+title: Audi
 date: 2016-05-28 05:00:00 Z
 position: 0
-color: "#1c384d"
-social-image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
-social-description: Jack Erwin
+color: "#e1e1e1"
+social-image: "/uploads/WGP_1081-2048x1365.jpg"
+social-description: Audi
 modules:
-- type: hero
-  image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
+- type: video
+  Object: "/uploads/WGP_8924-2048x1365.jpg"
   alt: 
 - type: text
   excerpt: Honing **Jack Erwin**'s brand experience to tell the story of the contemporary
