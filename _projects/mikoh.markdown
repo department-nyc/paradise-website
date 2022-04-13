@@ -1,11 +1,11 @@
 ---
-title: Mikoh
+title: Jägermeister
 date: 2016-05-28 04:19:00 Z
 position: 1
 color: "#d5c5b1"
 modules:
 - type: hero
-  image: "/uploads/Mikoh_Hero_20160718.jpg"
+  image: "/uploads/JAGER_SLITHER.jpg"
   alt: 
 - type: text
   excerpt: Introducing eyewear to **Mikoh**'s lineup of stellar summer essentials.
