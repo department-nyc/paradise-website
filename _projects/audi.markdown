@@ -3,43 +3,30 @@ title: Audi
 date: 2016-05-28 05:00:00 Z
 position: 0
 color: "#e1e1e1"
-social-image: "/uploads/WGP_1081-2048x1365.jpg"
+social-image: "/uploads/AUDI_SLITHER-356ce9.jpg"
 social-description: Audi
 modules:
-- type: video
-  Object: "/uploads/WGP_8924-2048x1365.jpg"
+- type: hero
+  image: "/uploads/AUDI_SLITHER-356ce9.jpg"
   alt: 
+- type: text
+  excerpt: Audi **Electric Eye** - a visual journey to showcase that there is hope
+    in sustainable discovery and adventure.
+  body: "A vision of sustainable exploration: ‘Electric Eye’ is the culmination of
+    a 3,500 kilometre, 10-day road-trip in the all-electric Audi e-tron Sportback
+    with acclaimed Australian photographer, Woody Gooch.\n\nHero Talent & Stills Photographer:
+    Woody Gooch\nDirector & Director of Photography: Stefan Jose\nProducer: Coralie
+    Tapper\nEditor: Andrew Holmes\nB Camera Operator: Rhys Carlill\n1st Assistant
+    Camera: Jackson Lana\nColorist: Fergus Rotherham\nComposer: Dustin Lau\nEditorial
+    Writer: Sarah Bristow\nAssociate Producer: Luke Kneller\nSound Designer: Dylan
+    Barfield\n\nFeatured Talent:\n\n* Woody Gooch\n\n* Josie Prendergast\n  \n\n*
+    David Moyle\n  \n\n* Mark LaBrooy\n  \n\n* Nick Kirshner\n  \n\n* Madison Stewart\n
+    \ \n\n* Lucas Handley"
 - type: video
   embed: <iframe src="https://player.vimeo.com/video/698857987?h=4cc1194776" width="640"
     height="267" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen></iframe>
-- type: text
-  excerpt: Audi **Electric Eye** - a visual journey to showcase that there is hope
-    in sustainable discovery and adventure.
-  body: |
-    A vision of sustainable exploration: ‘Electric Eye’ is the culmination of a 3,500 kilometre, 10-day road-trip in the all-electric Audi e-tron Sportback with acclaimed Australian photographer, Woody Gooch.
-
-    Hero Talent & Stills Photographer: Woody Gooch
-    Director & Director of Photography: Stefan Jose
-    Producer: Coralie Tapper
-    Editor: Andrew Holmes
-    B Camera Operator: Rhys Carlill
-    1st Assistant Camera: Jackson Lana
-    Colorist: Fergus Rotherham
-    Composer: Dustin Lau
-    Editorial Writer: Sarah Bristow
-    Associate Producer: Luke Kneller
-    Sound Designer: Dylan Barfield
-
-    Featured Talent:
-
-    Woody Gooch
-    Josie Prendergast
-    David Moyle
-    Mark LaBrooy
-    Nick Kirshner
-    Madison Stewart
-    Lucas Handley
+  aspect_padding: 42%
 - type: image
   image: "/uploads/WGP_1500.jpg"
 - type: image
