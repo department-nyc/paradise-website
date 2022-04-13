@@ -32,13 +32,13 @@ defaults:
     layout: project
 tagline: 
 url: http://studioparadise.com
-social-image: "/uploads/12486055_1017483594961747_9183100960315489762_o.png"
+social-image: "/uploads/STUDIO_PARIAH_v3-d6f00d.png"
 social-description: Hey you've found Paradise - not that type of Paradise, put your
   clothes back on, but feel free to say hello.
-vimeo_url: some-vimeo-url
-instagram: studioparadisenyc
-linkedin: studio-paradise
-behance: studioparadise
+vimeo_url: https://vimeo.com/user43280791
+instagram: studiopariah
+linkedin: studio-pariah
+behance: 
 studio:
   clients:
   - name: Thom Browne
@@ -71,18 +71,18 @@ studio:
   - name: Leader Bag Co.
     project: Leader Bag
 index-slider-images:
-- image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
+- image: "/uploads/HERO_IMAGE.jpg"
   alt: 
-  project: Kaelen
-- image: "/uploads/1JE_Home.jpg"
+  project: 
+- image: "/uploads/HERO_IMAGE2.jpg"
   alt: 
-  project: Jack Erwin
-- image: "/uploads/Mikoh_HomepageHero_20160803.jpg"
+  project: 
+- image: "/uploads/HERO_IMAGE3.jpg"
   alt: 
-  project: Mikoh
-- image: "/uploads/Leader_HomepageHero_20160803.jpg"
+  project: 
+- image: "/uploads/HERO_IMAGE4.jpg"
   alt: 
-  project: Leader Bag
+  project: 
 - image: "/uploads/Prize_HomepageHero_20160803.jpg"
   alt: 
   project: Prize
