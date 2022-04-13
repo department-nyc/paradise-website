@@ -13,6 +13,7 @@ modules:
   embed: <iframe src="https://player.vimeo.com/video/698857987?h=4cc1194776" width="640"
     height="267" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen></iframe>
+  aspect_padding: 42%
 - type: text
   excerpt: Audi **Electric Eye** - a visual journey to showcase that there is hope
     in sustainable discovery and adventure.
