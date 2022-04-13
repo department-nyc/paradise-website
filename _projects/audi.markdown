@@ -6,7 +6,7 @@ color: "#e1e1e1"
 social-image: "/uploads/AUDI_SLITHER-356ce9.jpg"
 social-description: Audi
 modules:
-- type: image
+- type: hero
   image: "/uploads/AUDI_SLITHER-356ce9.jpg"
   alt: 
 - type: text
