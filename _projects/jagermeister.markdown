@@ -8,8 +8,8 @@ modules:
   image: "/uploads/JAGER_SLITHER.jpg"
   alt: 
 - type: text
-  excerpt: Jägermeister Partners With Mustard, Smino & EarthGang For “\*\*Meister
-    Class\*\*” Sessions
+  excerpt: Jägermeister Partners with Mustard, Smino & EarthGang for “**Meister Class**”
+    sessions.
   body: "Mikoh is a colorful and luxurious swimwear brand created by and inspired
     by the lives of sister duo Oleema and Kalani Miller. Paradise have a longstanding
     relationship with Mikoh collaborating on seasonal textile prints, and in 2015
