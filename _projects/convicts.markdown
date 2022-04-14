@@ -8,6 +8,10 @@ modules:
   image: "/uploads/allHERO_IMAGE19.jpg"
   alt: 
   title: 
+- type: video
+  embed: <iframe src="https://player.vimeo.com/video/681129072?h=0d110b0325" width="640"
+    height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
 - type: text
   excerpt: The spirit of camaraderie and rebellion of **Convicts** shines through
     with a bold identity and editorial website.
