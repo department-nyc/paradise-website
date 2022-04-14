@@ -71,16 +71,28 @@ studio:
   - name: Leader Bag Co.
     project: Leader Bag
 index-slider-images:
-- image: "/uploads/HERO_IMAGE.jpg"
+- image: "/uploads/allHERO_IMAGE.jpg"
   alt: 
   project: 
-- image: "/uploads/HERO_IMAGE2.jpg"
+- image: "/uploads/allHERO_IMAGE2.jpg"
   alt: 
   project: 
-- image: "/uploads/HERO_IMAGE3.jpg"
+- image: "/uploads/allHERO_IMAGE3.jpg"
   alt: 
   project: 
-- image: "/uploads/HERO_IMAGE4.jpg"
+- image: "/uploads/allHERO_IMAGE4.jpg"
+  alt: 
+  project: 
+- image: "/uploads/allHERO_IMAGE5.jpg"
+  alt: 
+  project: 
+- image: "/uploads/allHERO_IMAGE6.jpg"
+  alt: 
+  project: 
+- image: "/uploads/allHERO_IMAGE8.jpg"
+  alt: 
+  project: 
+- image: "/uploads/allHERO_IMAGE7.jpg"
   alt: 
   project: 
 gems:
