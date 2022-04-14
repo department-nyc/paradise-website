@@ -1,5 +1,5 @@
 ---
-title: Rosewood Hotels
+title: Rosewood
 date: 2016-05-28 04:03:00 Z
 position: 3
 modules:
@@ -38,7 +38,7 @@ modules:
   embed: <iframe src="https://player.vimeo.com/video/569484329?h=a8e55dae2e" width="640"
     height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen></iframe>
-  aspect_padding: 42%
+  aspect_padding: 56.25%
 - type: image
   url: 
   image: "/uploads/allHERO_IMAGE26.jpg"
