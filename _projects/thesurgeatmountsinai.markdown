@@ -21,7 +21,7 @@ modules:
     The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player, that, scroll, becomes sticky, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience. For the convicts map, we created a custom city-guide for each featured Convict with a Google Maps integration.
   text: 
   variation: centered
-  full-project-title: Convicts
+  full-project-title: The Surge at Mount Sinai
 - type: video
   embed: <iframe src="https://player.vimeo.com/video/681129072?h=0d110b0325" width="640"
     height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
