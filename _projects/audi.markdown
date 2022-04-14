@@ -41,9 +41,9 @@ modules:
     Madison Stewart
     Lucas Handley
 - type: image
-  image: "/uploads/WGP_1500.jpg"
+  image: "/uploads/allHERO_IMAGE9.jpg"
 - type: image
-  image: "/uploads/IMG_6240%202.JPG"
+  image: "/uploads/allHERO_IMAGE10.jpg"
 - type: website-link
   url: http://www.audiusa.com
 - type: credits
