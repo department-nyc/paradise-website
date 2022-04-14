@@ -1,16 +1,14 @@
 ---
-title: Leader Bag Co.
+title: Rosewood Hotels
 date: 2016-05-28 04:03:00 Z
 position: 3
 modules:
 - type: hero
-  image: "/uploads/Leader_Hero_20160802.jpg"
+  image: "/uploads/allHERO_IMAGE25.jpg"
   alt: 
 - type: text
-  excerpt: 'Designing a contemporary & utilitarian diaper bag that fits the modern
-    family for **Leader Bag Co.**
-
-'
+  excerpt: "**PlaceMakers** are the embodiment of Rosewood’s commitment towards elevating
+    culture and community.\n"
   body: "Founded in 2013 by three mothers - and sisters - Leader Bag Co. gives modern
     parents a contemporary and stylish choice in an otherwise uninspiring sea of unicorns,
     polka dots and rainbows. Paradise was engaged to design this diaper bag and has
@@ -36,36 +34,24 @@ modules:
     the brand and their product line.\n\n\n* Brand Strategy\n\n* Creative Direction\n\n*
     Product Design\n\n* Web Design\n\n* Web Development\n\n* Production Sourcing and
     Management\n"
-- type: image
-  image: "/uploads/Leader_10_20160802.jpg"
+- type: video
+  embed: <iframe src="https://player.vimeo.com/video/569484329?h=a8e55dae2e" width="640"
+    height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
+  aspect_padding: 42%
 - type: image
   url: 
-  image: "/uploads/Leader_2_20160802.jpg"
+  image: "/uploads/allHERO_IMAGE26.jpg"
 - type: image
-  image: "/uploads/leader_deatil_final-logo.jpg"
+  image: "/uploads/allHERO_IMAGE27.jpg"
 - type: image
-  image: "/uploads/Leader_4_20160802.jpg"
-- type: images-2up
-  images:
-  - image: "/uploads/Leader_8_20160802.jpg"
-    caption: 
-  - image: "/uploads/Leader_9_20160715-bee9f3.jpg"
+  image: "/uploads/allHERO_IMAGE28.jpg"
 - type: image
-  image: "/uploads/leader_deatil_final-front2.jpg"
+  image: "/uploads/allHERO_IMAGE29.jpg"
 - type: image
-  image: "/uploads/Leader_4_20160802-deedb9.jpg"
+  image: "/uploads/allHERO_IMAGE30.jpg"
   alt: 
   caption: 
-- type: 
-  image: "/uploads/leader_deatil_final-icon-145903.jpg"
-- type: image
-  image: "/uploads/Leader_1_20160802.jpg"
-- type: image
-  image: "/uploads/Leader_Web_20160802.jpg"
-  dimensions: 1800x2501
-- type: image
-  image: "/uploads/Leader_Web_PDP_160904-cf15f7.jpg"
-  dimensions: 1800 x 3881
 - type: credits
   credits:
   - url: 
