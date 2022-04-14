@@ -53,5 +53,10 @@ modules:
   - url: 
     emphasis: Sourcing & Manufacturing
     name: Paradise
+- type: video
+  embed: <iframe src="https://player.vimeo.com/video/699571376?h=8fc31b3867" width="640"
+    height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
+  aspect_padding: 56.25%
 ---
 
