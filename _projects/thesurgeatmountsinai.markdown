@@ -1,5 +1,5 @@
 ---
-title: The Surge at Mount Sinai
+title: The Surge
 date: 2016-05-28 04:03:00 Z
 position: 1
 color: "#e1e1e1"
