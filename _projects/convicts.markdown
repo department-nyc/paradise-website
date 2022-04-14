@@ -1,11 +1,11 @@
 ---
-title: Convicts
+title: The Surge at Mount Sinai
 date: 2016-05-28 04:03:00 Z
 position: 1
-color: "#000000"
+color: "#e1e1e1"
 modules:
 - type: hero
-  image: "/uploads/Convicts_Hero_20160819-f4b03e.jpg"
+  image: "/uploads/allHERO_IMAGE19.jpg"
   alt: 
   title: 
 - type: text
@@ -23,33 +23,15 @@ modules:
   variation: centered
   full-project-title: Convicts
 - type: image
-  image: "/uploads/Convicts_logo_20160822.png"
+  image: "/uploads/allHERO_IMAGE22.jpg"
   alt: 
   caption: 
 - type: image
-  image: "/uploads/CONVICTSGIF_20160822_A.gif"
+  image: "/uploads/allHERO_IMAGE23.jpg"
 - type: image
   url: 
-  image: "/uploads/Con_Branding.jpg"
-  dimensions: 2400x1591
+  image: "/uploads/allHERO_IMAGE21.jpg"
   caption: 
-- type: image
-  image: "/uploads/Convicts_Web_20160802.jpg"
-  dimensions: 2343x3703
-- type: image
-  dimensions: 2343x3703
-  image: "/uploads/Convicts_WebArticle_20160802.jpg"
-- type: image
-  image: "/uploads/Convicts_WebVideoPlayer_20160802.jpg"
-  dimensions: 2382x1633
-- type: image
-  image:
-  - "/uploads/Convicts_WebMap_20160802.jpg"
-  dimensions: 2382x1633
-- type: image
-  image:
-  - "/uploads/Convicts_WebNews_20160802.jpg"
-  dimensions: 2400x1633
 - type: website-link
   url: http://convicts.nyc/
 - type: credits
