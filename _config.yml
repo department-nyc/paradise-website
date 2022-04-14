@@ -31,7 +31,7 @@ defaults:
   values:
     layout: project
 tagline: 
-url: http://studioparadise.com
+url: http://studiopariah.com
 social-image: "/uploads/STUDIO_PARIAH_v3-d6f00d.png"
 social-description: Hey you've found Paradise - not that type of Paradise, put your
   clothes back on, but feel free to say hello.
@@ -71,9 +71,6 @@ studio:
   - name: Leader Bag Co.
     project: Leader Bag
 index-slider-images:
-- image: "/uploads/allHERO_IMAGE-ea2d98.jpg"
-  alt: 
-  project: 
 - image: "/uploads/allHERO_IMAGE2.jpg"
   alt: 
   project: 
