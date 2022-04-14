@@ -9,10 +9,6 @@ modules:
 - type: hero
   image: "/uploads/allHERO_IMAGE11.jpg"
   alt: 
-- type: video
-  embed: <iframe src="https://player.vimeo.com/video/698857987?h=4cc1194776" width="640"
-    height="267" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen></iframe>
 - type: text
   excerpt: Audi **Electric Eye** - a visual journey to showcase that there is hope
     in sustainable discovery and adventure.
@@ -40,6 +36,10 @@ modules:
     Nick Kirshner
     Madison Stewart
     Lucas Handley
+- type: video
+  embed: <iframe src="https://player.vimeo.com/video/698857987?h=4cc1194776" width="640"
+    height="267" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
 - type: image
   image: "/uploads/allHERO_IMAGE9.jpg"
 - type: image
