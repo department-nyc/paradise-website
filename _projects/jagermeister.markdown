@@ -24,6 +24,11 @@ modules:
     and matching branded inserts at the temple tips. All lenses are polarized for
     maximum UV protection and clarity. All pieces were handmade by our manufacturing
     partners in Japan to the highest quality standards. "
+- type: video
+  embed: <iframe src="https://player.vimeo.com/video/699571376?h=8fc31b3867" width="640"
+    height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen></iframe>
+  aspect_padding: 56.25%
 - type: image
   image: "/uploads/allHERO_IMAGE15.jpg"
 - type: image
@@ -53,10 +58,5 @@ modules:
   - url: 
     emphasis: Sourcing & Manufacturing
     name: Paradise
-- type: video
-  embed: <iframe src="https://player.vimeo.com/video/699571376?h=8fc31b3867" width="640"
-    height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen></iframe>
-  aspect_padding: 56.25%
 ---
 
