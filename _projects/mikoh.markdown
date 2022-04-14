@@ -8,7 +8,8 @@ modules:
   image: "/uploads/JAGER_SLITHER.jpg"
   alt: 
 - type: text
-  excerpt: Introducing eyewear to **Mikoh**'s lineup of stellar summer essentials.
+  excerpt: Jägermeister Partners With Mustard, Smino & EarthGang For “\*\*Meister
+    Class\*\*” Sessions
   body: "Mikoh is a colorful and luxurious swimwear brand created by and inspired
     by the lives of sister duo Oleema and Kalani Miller. Paradise have a longstanding
     relationship with Mikoh collaborating on seasonal textile prints, and in 2015
@@ -24,36 +25,15 @@ modules:
     maximum UV protection and clarity. All pieces were handmade by our manufacturing
     partners in Japan to the highest quality standards. "
 - type: image
-  image: "/uploads/Mikoh_9_20160715.jpg"
+  image: "/uploads/allHERO_IMAGE15.jpg"
 - type: images-2up
   images:
-  - image: "/uploads/Mikoh_2_20160715.jpg"
+  - image: "/uploads/allHERO_IMAGE14.jpg"
     dimensions: 1200x1049
-  - image: "/uploads/Mikoh_1_20160715.jpg"
+  - image: "/uploads/allHERO_IMAGE17.jpg"
     dimensions: 1200x1049
 - type: image
-  image: "/uploads/Mikoh_5_20160715.jpg"
-  dimensions: 2400x1514
-- type: image
-  image: "/uploads/Mikoh_4_20160716.jpg"
-  dimensions: 2400x1702
-- type: image
-  image: "/uploads/Mikoh_3_20160716.jpg"
-  dimensions: 2400x1415
-- type: image
-  image: "/uploads/Mikoh_6_20160715.jpg"
-  dimensions: 2400x1600
-- type: image
-  image: "/uploads/Mikoh_Lookbook_07_082016_JO_A.jpg"
-  dimensions: 2400x1600
-- type: image
-  image: "/uploads/Mikoh_Lookbook_02_082016_JO_A.jpg"
-  dimensions: 2400x1600
-- type: image
-  image: "/uploads/Mikoh_Lookbook_04_082016_JO_A.jpg"
-  dimensions: 2400x1600
-- type: image
-  image: "/uploads/Mikoh_Lookbook_05_082016_JO_A.jpg"
+  image: "/uploads/allHERO_IMAGE16.jpg"
   dimensions: 2400x1600
 - type: website link
   url:
