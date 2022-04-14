@@ -26,15 +26,13 @@ modules:
     partners in Japan to the highest quality standards. "
 - type: image
   image: "/uploads/allHERO_IMAGE15.jpg"
-- type: images-2up
-  images:
-  - image: "/uploads/allHERO_IMAGE14.jpg"
-    dimensions: 1200x1049
-  - image: "/uploads/allHERO_IMAGE17.jpg"
-    dimensions: 1200x1049
+- type: image
+  image: "/uploads/allHERO_IMAGE14-97116c.jpg"
 - type: image
   image: "/uploads/allHERO_IMAGE16.jpg"
   dimensions: 2400x1600
+- type: image
+  image: "/uploads/allHERO_IMAGE17-dc3820.jpg"
 - type: website link
   url:
   - http://shop.mikoh.com/collections/sun
