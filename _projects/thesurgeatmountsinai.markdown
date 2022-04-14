@@ -26,6 +26,7 @@ modules:
   embed: <iframe src="https://player.vimeo.com/video/681129072?h=0d110b0325" width="640"
     height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen></iframe>
+  aspect_padding: 56.25%
 - type: image
   image: "/uploads/allHERO_IMAGE22.jpg"
   alt: 
